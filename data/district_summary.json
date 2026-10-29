@@ -1,1 +1,110 @@
-[]
+[
+  {
+    "district": "Ballari",
+    "checklists": 10,
+    "species": 0,
+    "speciesList": []
+  },
+  {
+    "district": "Bengaluru Rural",
+    "checklists": 5,
+    "species": 0,
+    "speciesList": []
+  },
+  {
+    "district": "Bengaluru Urban",
+    "checklists": 10,
+    "species": 0,
+    "speciesList": []
+  },
+  {
+    "district": "Chikkaballapura",
+    "checklists": 10,
+    "species": 0,
+    "speciesList": []
+  },
+  {
+    "district": "Chikkamagaluru",
+    "checklists": 3,
+    "species": 0,
+    "speciesList": []
+  },
+  {
+    "district": "Chitradurga",
+    "checklists": 8,
+    "species": 0,
+    "speciesList": []
+  },
+  {
+    "district": "Dakshina Kannada",
+    "checklists": 3,
+    "species": 0,
+    "speciesList": []
+  },
+  {
+    "district": "Dharwad",
+    "checklists": 1,
+    "species": 0,
+    "speciesList": []
+  },
+  {
+    "district": "Gadag",
+    "checklists": 2,
+    "species": 0,
+    "speciesList": []
+  },
+  {
+    "district": "Kalaburagi",
+    "checklists": 4,
+    "species": 0,
+    "speciesList": []
+  },
+  {
+    "district": "Kodagu",
+    "checklists": 6,
+    "species": 0,
+    "speciesList": []
+  },
+  {
+    "district": "Koppal",
+    "checklists": 2,
+    "species": 0,
+    "speciesList": []
+  },
+  {
+    "district": "Mandya",
+    "checklists": 4,
+    "species": 0,
+    "speciesList": []
+  },
+  {
+    "district": "Mysuru",
+    "checklists": 10,
+    "species": 0,
+    "speciesList": []
+  },
+  {
+    "district": "Shivamogga",
+    "checklists": 7,
+    "species": 0,
+    "speciesList": []
+  },
+  {
+    "district": "Tumakuru",
+    "checklists": 2,
+    "species": 0,
+    "speciesList": []
+  },
+  {
+    "district": "Udupi",
+    "checklists": 1,
+    "species": 0,
+    "speciesList": []
+  },
+  {
+    "district": "Uttara Kannada",
+    "checklists": 10,
+    "species": 0,
+    "speciesList": []
+  }
+]
