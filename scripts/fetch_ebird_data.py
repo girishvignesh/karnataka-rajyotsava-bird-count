@@ -14,12 +14,12 @@ CONFIG = ROOT / "config" / "districts.json"
 OUT = ROOT / "data"
 
 API_BASE = "https://api.ebird.org/v2"
-EVENT_START = date(2026, 10, 29)
+EVENT_START = date(2026, 10, 30)
 EVENT_END = date(2026, 11, 2)
 REQUEST_DELAY_SECONDS = 3
 MAX_REQUEST_ATTEMPTS = 5
 RETRY_BASE_SECONDS = 60
-CHECKLIST_FEED_LIMIT = 200
+CHECKLIST_FEED_LIMIT = 1000
 IST = timezone(timedelta(hours=5, minutes=30))
 
 
