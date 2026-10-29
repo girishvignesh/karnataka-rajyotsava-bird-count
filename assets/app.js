@@ -117,6 +117,10 @@ function renderStats() {
 
   document.getElementById("lastUpdated").textContent =
     `Updated: ${karnatakaSummary.lastUpdated ?? "—"}`;
+
+  const coverageWarning = document.getElementById("coverageWarning");
+  coverageWarning.textContent = karnatakaSummary.coverageWarning || "";
+  coverageWarning.hidden = !karnatakaSummary.coverageWarning;
 }
 
 function renderDailyChart() {

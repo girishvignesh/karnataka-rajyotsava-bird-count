@@ -114,7 +114,8 @@ def species_names(observations, taxonomy_names):
 
 
 def fetch_district_checklists(
-    district_code: str, district_name: str, taxonomy_names: dict
+    district_code: str, district_name: str, taxonomy_names: dict,
+    limited_feeds: set,
 ):
     checklists = []
 
@@ -126,10 +127,12 @@ def fetch_district_checklists(
 
         checklist_feed = api_get(path, {"maxResults": CHECKLIST_FEED_LIMIT})
         if len(checklist_feed) >= CHECKLIST_FEED_LIMIT:
-            raise RuntimeError(
+            limited_feeds.add((district_name, event_day.isoformat()))
+            print(
                 f"Checklist feed reached the {CHECKLIST_FEED_LIMIT}-result limit "
-                f"for {district_name} on {event_day}; refusing to publish "
-                "potentially incomplete totals."
+                f"for {district_name} on {event_day}; accumulated totals "
+                "may be incomplete.",
+                flush=True,
             )
         print(
             f"{district_name} on {event_day}: {len(checklist_feed)} checklists.",
@@ -151,16 +154,79 @@ def fetch_district_checklists(
                     "checklistId": checklist_id,
                     "date": event_day.isoformat(),
                     "district": district_name,
-                    "observer": checklist_details.get("userDisplayName", "eBird user"),
                     "species": species,
-                    "url": f"https://ebird.org/checklist/{checklist_id}",
                 }
             )
 
     return checklists
 
 
-def build_summaries(checklists):
+def load_archive():
+    path = OUT / "checklists.json"
+    if not path.exists():
+        print("No checklist archive found; starting collection from this refresh.")
+        return {}, set()
+
+    archive = json.loads(path.read_text(encoding="utf-8"))
+    if (
+        archive["startDate"] != EVENT_START.isoformat()
+        or archive["endDate"] != EVENT_END.isoformat()
+    ):
+        raise ValueError("Checklist archive belongs to a different event date range.")
+
+    checklists = {}
+    for checklist in archive["checklists"]:
+        checklist_id = checklist["checklistId"]
+        if (
+            not isinstance(checklist_id, str)
+            or not checklist_id
+            or checklist_id in checklists
+            or not isinstance(checklist["district"], str)
+            or not checklist["district"]
+            or not EVENT_START <= date.fromisoformat(checklist["date"]) <= EVENT_END
+            or not isinstance(checklist["species"], list)
+            or not all(isinstance(name, str) and name for name in checklist["species"])
+        ):
+            raise ValueError(f"Invalid or duplicate archived checklist: {checklist_id}")
+        checklists[checklist_id] = checklist
+
+    limited_feeds = set()
+    for feed in archive["limitedFeeds"]:
+        if (
+            not isinstance(feed["district"], str)
+            or not feed["district"]
+            or not EVENT_START <= date.fromisoformat(feed["date"]) <= EVENT_END
+        ):
+            raise ValueError(f"Invalid archived limited feed: {feed}")
+        limited_feeds.add((feed["district"], feed["date"]))
+    return checklists, limited_feeds
+
+
+def save_archive(checklists, limited_feeds):
+    archive = {
+        "startDate": EVENT_START.isoformat(),
+        "endDate": EVENT_END.isoformat(),
+        "checklists": sorted(
+            checklists.values(), key=lambda record: (record["date"], record["checklistId"])
+        ),
+        "limitedFeeds": [
+            {"district": district, "date": day}
+            for district, day in sorted(limited_feeds)
+        ],
+    }
+    OUT.mkdir(exist_ok=True)
+    path = OUT / "checklists.json"
+    temporary_path = path.with_suffix(".json.tmp")
+    try:
+        temporary_path.write_text(
+            json.dumps(archive, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        temporary_path.replace(path)
+    finally:
+        temporary_path.unlink(missing_ok=True)
+
+
+def build_summaries(checklists, limited_feeds=()):
     district_checklists = defaultdict(int)
     district_species = defaultdict(set)
     daily_checklists = defaultdict(int)
@@ -209,6 +275,12 @@ def build_summaries(checklists):
         "districtsCovered": len(district_checklists),
         "speciesList": sorted(all_species),
         "lastUpdated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+        "coverageWarning": (
+            "Accumulated totals may be incomplete: the 200-checklist feed limit "
+            "was reached for one or more district/dates. Refreshes can overlap "
+            "and do not guarantee capturing every checklist."
+            if limited_feeds else ""
+        ),
     }
 
     OUT.mkdir(exist_ok=True)
@@ -231,19 +303,23 @@ def build_summaries(checklists):
 
 def main():
     config = json.loads(CONFIG.read_text(encoding="utf-8"))
+    all_checklists, limited_feeds = load_archive()
+    previous_count = len(all_checklists)
     taxonomy_names = fetch_taxonomy_names()
-    all_checklists = []
 
     for district in config["districts"]:
         print(f"Fetching {district['name']}…")
-        all_checklists.extend(
-            fetch_district_checklists(
-                district["code"], district["name"], taxonomy_names
-            )
-        )
+        for checklist in fetch_district_checklists(
+            district["code"], district["name"], taxonomy_names, limited_feeds
+        ):
+            all_checklists[checklist["checklistId"]] = checklist
 
-    build_summaries(all_checklists)
-    print(f"Dashboard updated with {len(all_checklists)} checklists.")
+    save_archive(all_checklists, limited_feeds)
+    build_summaries(list(all_checklists.values()), limited_feeds)
+    print(
+        f"Dashboard updated with {len(all_checklists)} accumulated checklists "
+        f"({len(all_checklists) - previous_count} new)."
+    )
 
 
 if __name__ == "__main__":

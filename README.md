@@ -32,8 +32,33 @@ still fails, the workflow fails without replacing the published summaries with
 partial data. Per-district, per-date checklist counts are logged during refresh.
 
 The historical checklist feed defaults to only 10 results. The fetcher requests
-the maximum of 200 per district per day. If that limit is reached, it fails
-explicitly rather than publishing potentially truncated totals.
+the maximum of 200 per district per day per refresh. If that limit is reached,
+the dashboard publishes accumulated totals with a visible incomplete-coverage
+warning. That warning persists because later refreshes cannot prove that
+previously missed checklists have been recovered.
+
+## Accumulated checklist archive
+
+Each successful refresh saves `data/checklists.json`, keyed logically by eBird
+checklist ID. New IDs are added, existing IDs are updated from freshly fetched
+details, and previously saved checklists absent from the latest feed are kept.
+State, district and daily summaries are rebuilt from the entire archive, so a
+new day does not reset earlier days. All elapsed event dates are fetched again
+to discover late submissions.
+
+The existing workflow commits the archive together with the summaries, allowing
+the next GitHub Actions run to resume collection. Keep this file when deploying
+or updating the code. A malformed archive or an archive for a different event
+date range causes the refresh to fail rather than discard saved data.
+
+Two non-overlapping 200-result feeds can accumulate 400 unique checklists for
+one district/day. Overlapping feeds add fewer new IDs; collection is not
+guaranteed exhaustive. Checklists removed from eBird cannot be inferred from
+their absence in a limited feed, so archived records require manual
+reconciliation for deletions.
+
+On the first run, the archive starts with retrievable checklists. Existing
+aggregate summaries cannot be converted back into individual checklist records.
 
 ## Setup
 
@@ -49,8 +74,10 @@ explicitly rather than publishing potentially truncated totals.
 
 ## Data note
 
-This portal displays aggregated checklist and species totals only.
-It does not publish participant contact information or raw eBird data.
+The dashboard displays aggregated checklist and species totals. The public
+archive contains only checklist IDs, observation dates, district names and
+species names; it does not store observer names, contacts, coordinates or raw
+API responses.
 
 Data source: eBird, Cornell Lab of Ornithology.
 Species names are resolved from eBird taxonomy using the species codes in

@@ -58,6 +58,14 @@ main {
   margin-bottom: 1.5rem;
 }
 
+.coverage-warning {
+  padding: 1rem;
+  border: 1px solid #d97706;
+  border-radius: 10px;
+  background: #fffbeb;
+  color: #92400e;
+}
+
 .stat-card {
   background: white;
   border: 1px solid var(--border);
