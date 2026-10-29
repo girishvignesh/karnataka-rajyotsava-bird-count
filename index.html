@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karnataka Rajyotsava Bird Count 2026</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <h1>Karnataka Rajyotsava Bird Count</h1>
+      <p>October 30 – November 2, 2026 · eBird checklist dashboard</p>
+    </div>
+    <div class="updated" id="lastUpdated">Loading…</div>
+  </header>
+
+  <main>
+    <section class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-label">Total Checklists</span>
+        <span class="stat-value" id="totalChecklists">—</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Total Species</span>
+        <span class="stat-value" id="totalSpecies">—</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Districts Covered</span>
+        <span class="stat-value" id="districtsCovered">—</span>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Karnataka District Map</h2>
+      <p class="muted">Click a district to filter the leaderboard.</p>
+      <div id="map"></div>
+      <div class="legend">
+        <span>Low</span>
+        <div class="legend-scale"></div>
+        <span>High</span>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Daily Progress</h2>
+      <canvas id="dailyChart"></canvas>
+    </section>
+
+    <section class="panel">
+      <h2>District Leaderboard</h2>
+      <input id="districtSearch" type="search" placeholder="Search district…" />
+      <div class="table-wrap">
+        <table id="districtTable">
+          <thead>
+            <tr>
+              <th>District</th>
+              <th>Checklists</th>
+              <th>Species</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Species Recorded</h2>
+      <input id="speciesSearch" type="search" placeholder="Search species…" />
+      <div class="table-wrap">
+        <table id="speciesTable">
+          <thead>
+            <tr>
+              <th>Species</th>
+              <th>Districts Recorded</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Aggregated eBird checklist data submitted for the Karnataka Rajyotsava
+      Bird Count, October 30–November 2, 2026.
+    </p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
