@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "district": "Bengaluru Urban",
+    "checklists": 2,
+    "species": 3,
+    "speciesList": [
+      "Eastern Barn Owl",
+      "Rock Pigeon (Feral Pigeon)",
+      "Spotted Owlet"
+    ]
+  }
+]

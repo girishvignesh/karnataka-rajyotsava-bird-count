@@ -3,10 +3,14 @@
   "event": "Karnataka Rajyotsava Bird Count",
   "startDate": "2026-10-30",
   "endDate": "2026-11-02",
-  "checklists": 0,
-  "species": 0,
-  "districtsCovered": 0,
-  "speciesList": [],
-  "lastUpdated": "2026-10-29 13:22 UTC",
+  "checklists": 2,
+  "species": 3,
+  "districtsCovered": 1,
+  "speciesList": [
+    "Eastern Barn Owl",
+    "Rock Pigeon (Feral Pigeon)",
+    "Spotted Owlet"
+  ],
+  "lastUpdated": "2026-10-29 20:06 UTC",
   "coverageWarning": ""
 }

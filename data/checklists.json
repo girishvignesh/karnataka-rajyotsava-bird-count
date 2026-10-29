@@ -1,6 +1,24 @@
 {
   "startDate": "2026-10-30",
   "endDate": "2026-11-02",
-  "checklists": [],
+  "checklists": [
+    {
+      "checklistId": "S406394325",
+      "date": "2026-10-30",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Rock Pigeon (Feral Pigeon)",
+        "Spotted Owlet"
+      ]
+    },
+    {
+      "checklistId": "S406395091",
+      "date": "2026-10-30",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Eastern Barn Owl"
+      ]
+    }
+  ],
   "limitedFeeds": []
 }
