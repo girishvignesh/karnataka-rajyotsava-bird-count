@@ -12,7 +12,7 @@ CONFIG = ROOT / "config" / "districts.json"
 OUT = ROOT / "data"
 
 API_BASE = "https://api.ebird.org/v2"
-EVENT_START = date(2026, 10, 30)
+EVENT_START = date(2026, 10, 29)
 EVENT_END = date(2026, 11, 2)
 REQUEST_DELAY_SECONDS = 1
 
