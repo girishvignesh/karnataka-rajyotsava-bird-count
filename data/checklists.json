@@ -1,0 +1,3272 @@
+{
+  "startDate": "2026-10-29",
+  "endDate": "2026-11-02",
+  "checklists": [
+    {
+      "checklistId": "S406196042",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Common Tailorbird",
+        "Greater Coucal",
+        "Indian White-eye",
+        "Pale-billed Flowerpecker",
+        "Peregrine Falcon",
+        "Red-vented Bulbul",
+        "Red-whiskered Bulbul",
+        "White-browed Wagtail"
+      ]
+    },
+    {
+      "checklistId": "S406196834",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Ashy Prinia",
+        "Asian Green Bee-eater",
+        "Asian Koel",
+        "Black Drongo",
+        "Black Kite",
+        "Common Myna",
+        "Common Tailorbird",
+        "Coppersmith Barbet",
+        "Greater Coucal",
+        "Greenish Warbler",
+        "Large-billed Crow",
+        "Loten's Sunbird",
+        "Oriental Magpie-Robin",
+        "Pale-billed Flowerpecker",
+        "Purple-rumped Sunbird",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "Shikra",
+        "Spotted Owlet",
+        "Tickell's Blue Flycatcher",
+        "White-cheeked Barbet",
+        "White-throated Kingfisher"
+      ]
+    },
+    {
+      "checklistId": "S406197340",
+      "date": "2026-10-29",
+      "district": "Shivamogga",
+      "species": [
+        "Little Swift"
+      ]
+    },
+    {
+      "checklistId": "S406197385",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Ashy Prinia",
+        "Asian Koel",
+        "Black Kite",
+        "Black-rumped Flameback",
+        "Brahminy Kite",
+        "Common Myna",
+        "Common Tailorbird",
+        "Gray Heron",
+        "Great Cormorant",
+        "Greater Coucal",
+        "House Crow",
+        "Indian Pond-Heron",
+        "Little Cormorant",
+        "Little Egret",
+        "Oriental Magpie-Robin",
+        "Pale-billed Flowerpecker",
+        "Purple Sunbird",
+        "Red-wattled Lapwing",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "White-browed Wagtail",
+        "White-cheeked Barbet"
+      ]
+    },
+    {
+      "checklistId": "S406197932",
+      "date": "2026-10-29",
+      "district": "Uttara Kannada",
+      "species": [
+        "Indian Scimitar-Babbler",
+        "Malabar Whistling-Thrush",
+        "Oriental Magpie-Robin",
+        "White-throated Kingfisher"
+      ]
+    },
+    {
+      "checklistId": "S406198171",
+      "date": "2026-10-29",
+      "district": "Shivamogga",
+      "species": [
+        "Indian Pond-Heron"
+      ]
+    },
+    {
+      "checklistId": "S406198238",
+      "date": "2026-10-29",
+      "district": "Shivamogga",
+      "species": [
+        "White-browed Wagtail"
+      ]
+    },
+    {
+      "checklistId": "S406198262",
+      "date": "2026-10-29",
+      "district": "Shivamogga",
+      "species": [
+        "Indian Pond-Heron"
+      ]
+    },
+    {
+      "checklistId": "S406199499",
+      "date": "2026-10-29",
+      "district": "Shivamogga",
+      "species": [
+        "Common Myna"
+      ]
+    },
+    {
+      "checklistId": "S406199675",
+      "date": "2026-10-29",
+      "district": "Uttara Kannada",
+      "species": [
+        "Black Drongo",
+        "Brown Shrike",
+        "Crimson-backed Sunbird",
+        "Gray Junglefowl",
+        "Greenish Warbler",
+        "House Crow",
+        "Indian Scimitar-Babbler",
+        "Malabar Whistling-Thrush",
+        "Purple Sunbird",
+        "Shikra"
+      ]
+    },
+    {
+      "checklistId": "S406200650",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Barn Swallow",
+        "Black Kite",
+        "Black-winged Kite",
+        "Brahminy Kite",
+        "Eastern Cattle-Egret",
+        "Indian Pond-Heron",
+        "Rock Pigeon (Feral Pigeon)",
+        "Shikra",
+        "White-breasted Waterhen",
+        "White-throated Kingfisher"
+      ]
+    },
+    {
+      "checklistId": "S406200920",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Ashy Prinia",
+        "Asian Green Bee-eater",
+        "Asian Koel",
+        "Black Drongo",
+        "Black Kite",
+        "Blyth's Reed Warbler",
+        "Booted Warbler",
+        "Brown Shrike",
+        "Common Iora",
+        "Common Myna",
+        "Eastern Cattle-Egret",
+        "Eastern Red-rumped Swallow",
+        "Gray Francolin",
+        "Greater Coucal",
+        "Indian Pond-Heron",
+        "Indian Robin",
+        "Large-billed Crow",
+        "Oriental Magpie-Robin",
+        "Pale-billed Flowerpecker",
+        "Purple Sunbird",
+        "Red-vented Bulbul",
+        "Red-whiskered Bulbul",
+        "Rose-ringed Parakeet",
+        "Shikra",
+        "Spotted Dove",
+        "White-browed Bulbul",
+        "White-cheeked Barbet",
+        "White-throated Kingfisher",
+        "Zitting Cisticola",
+        "buttonquail sp."
+      ]
+    },
+    {
+      "checklistId": "S406201195",
+      "date": "2026-10-29",
+      "district": "Uttara Kannada",
+      "species": [
+        "Crimson-backed Sunbird",
+        "Gray Junglefowl",
+        "Greenish Warbler",
+        "Indian Scimitar-Babbler",
+        "Plum-headed Parakeet",
+        "Puff-throated Babbler",
+        "Red-whiskered Bulbul",
+        "Rufous Babbler",
+        "White-bellied Woodpecker",
+        "White-rumped Shama"
+      ]
+    },
+    {
+      "checklistId": "S406201439",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Greater Coucal",
+        "Indian White-eye",
+        "Large-billed Crow",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Shikra",
+        "White-cheeked Barbet"
+      ]
+    },
+    {
+      "checklistId": "S406201562",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Black Kite",
+        "Common Myna",
+        "Common Tailorbird",
+        "House Crow",
+        "Purple-rumped Sunbird",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "Spotted Dove",
+        "White-cheeked Barbet"
+      ]
+    },
+    {
+      "checklistId": "S406202454",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Black Kite",
+        "Common Myna",
+        "Dusky Crag-Martin",
+        "Large-billed Crow",
+        "Pale-billed Flowerpecker",
+        "Purple-rumped Sunbird",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "White-cheeked Barbet"
+      ]
+    },
+    {
+      "checklistId": "S406202548",
+      "date": "2026-10-29",
+      "district": "Kodagu",
+      "species": [
+        "Greater Coucal",
+        "White-browed Wagtail"
+      ]
+    },
+    {
+      "checklistId": "S406203109",
+      "date": "2026-10-29",
+      "district": "Uttara Kannada",
+      "species": [
+        "Black Drongo",
+        "Brown-cheeked Fulvetta",
+        "Crimson-backed Sunbird",
+        "Green Warbler",
+        "Greenish Warbler",
+        "Indian Scimitar-Babbler",
+        "Malabar Flameback",
+        "Medium Egret",
+        "Puff-throated Babbler",
+        "White-cheeked Barbet"
+      ]
+    },
+    {
+      "checklistId": "S406203306",
+      "date": "2026-10-29",
+      "district": "Chikkaballapura",
+      "species": [
+        "Asian Green Bee-eater",
+        "Bronzed Drongo",
+        "Common Sandpiper",
+        "Common Tailorbird",
+        "Crimson-backed Sunbird",
+        "Dusky Crag-Martin",
+        "Gray Wagtail",
+        "Gray-headed Bulbul",
+        "Greater Coucal",
+        "Greater Racket-tailed Drongo",
+        "Green Sandpiper",
+        "Green Warbler",
+        "Greenish Warbler",
+        "House Sparrow",
+        "Indian Peafowl",
+        "Indian Pond-Heron",
+        "Indian Scimitar-Babbler",
+        "Jungle Myna",
+        "Large-billed Crow",
+        "Little Egret",
+        "Loten's Sunbird",
+        "Malabar Barbet",
+        "Malabar Flameback",
+        "Oriental Magpie-Robin",
+        "Plum-headed Parakeet",
+        "Purple-rumped Sunbird",
+        "Red-vented Bulbul",
+        "Red-wattled Lapwing",
+        "Red-whiskered Bulbul",
+        "Rose-ringed Parakeet",
+        "Rufous Treepie",
+        "Spotted Dove",
+        "White-breasted Waterhen",
+        "White-cheeked Barbet",
+        "Yellow-footed Green-Pigeon"
+      ]
+    },
+    {
+      "checklistId": "S406203327",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Ashy Prinia",
+        "Blyth's Reed Warbler",
+        "Large-billed Crow",
+        "Pale-billed Flowerpecker",
+        "Purple Sunbird"
+      ]
+    },
+    {
+      "checklistId": "S406203727",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Asian Koel",
+        "Barn Swallow",
+        "Black Kite",
+        "Common Hoopoe",
+        "Common Myna",
+        "Common Tailorbird",
+        "Coppersmith Barbet",
+        "Eastern Cattle-Egret",
+        "Jungle Myna",
+        "Large-billed Crow",
+        "Oriental Magpie-Robin",
+        "Pale-billed Flowerpecker",
+        "Purple-rumped Sunbird",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "Small Minivet",
+        "Spotted Dove",
+        "White-cheeked Barbet",
+        "White-throated Kingfisher"
+      ]
+    },
+    {
+      "checklistId": "S406203969",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Alexandrine Parakeet",
+        "Ashy Prinia",
+        "Asian Green Bee-eater",
+        "Asian Koel",
+        "Black Drongo",
+        "Black Kite",
+        "Common Hawk-Cuckoo",
+        "Common Myna",
+        "Common Tailorbird",
+        "Dusky Crag-Martin",
+        "Gray Wagtail",
+        "Great Cormorant",
+        "Greater Coucal",
+        "Greenish Warbler",
+        "House Sparrow",
+        "Indian Cormorant",
+        "Indian Pond-Heron",
+        "Indian Spot-billed Duck",
+        "Indian White-eye",
+        "Jungle Myna",
+        "Little Cormorant",
+        "Little Egret",
+        "Little Grebe",
+        "Oriental Magpie-Robin",
+        "Pale-billed Flowerpecker",
+        "Purple Sunbird",
+        "Purple-rumped Sunbird",
+        "Red-vented Bulbul",
+        "Red-wattled Lapwing",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "Scaly-breasted Munia",
+        "Shikra",
+        "Spotted Dove",
+        "White-breasted Waterhen",
+        "White-cheeked Barbet",
+        "White-throated Kingfisher"
+      ]
+    },
+    {
+      "checklistId": "S406204498",
+      "date": "2026-10-29",
+      "district": "Chitradurga",
+      "species": [
+        "Ashy Prinia",
+        "Asian Green Bee-eater",
+        "Asian Koel",
+        "Asian Tit",
+        "Black Drongo",
+        "Black-rumped Flameback",
+        "Brahminy Starling",
+        "Common Iora",
+        "Common Myna",
+        "Common Tailorbird",
+        "Eurasian Collared-Dove",
+        "Gray Francolin",
+        "Greater Coucal",
+        "Indian Robin",
+        "Indian Silverbill",
+        "Indian White-eye",
+        "Large Gray Babbler",
+        "Laughing Dove",
+        "Long-tailed Shrike",
+        "Oriental Magpie-Robin",
+        "Pied Bushchat",
+        "Purple Sunbird",
+        "Purple-rumped Sunbird",
+        "Red Avadavat",
+        "Red-vented Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "Scaly-breasted Munia",
+        "Small Minivet",
+        "White-browed Wagtail",
+        "White-throated Kingfisher",
+        "Zitting Cisticola"
+      ]
+    },
+    {
+      "checklistId": "S406204734",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Ashy Prinia",
+        "Asian Tit",
+        "Black Kite",
+        "Common Myna",
+        "Common Tailorbird",
+        "House Crow",
+        "Jungle Myna",
+        "Large-billed Crow",
+        "Little Swift",
+        "Pale-billed Flowerpecker",
+        "Purple-rumped Sunbird",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "Shikra",
+        "Spotted Dove",
+        "White-cheeked Barbet"
+      ]
+    },
+    {
+      "checklistId": "S406205181",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Black Kite",
+        "Brahminy Kite",
+        "Common Tailorbird",
+        "Dusky Crag-Martin",
+        "Eastern Barn Owl",
+        "House Crow",
+        "Indian Pond-Heron",
+        "Little Egret",
+        "Purple Sunbird",
+        "Rock Pigeon (Feral Pigeon)"
+      ]
+    },
+    {
+      "checklistId": "S406205498",
+      "date": "2026-10-29",
+      "district": "Dharwad",
+      "species": [
+        "Black Drongo",
+        "Black Redstart",
+        "Common Tailorbird",
+        "Gray Francolin",
+        "Green Sandpiper",
+        "House Crow",
+        "House Sparrow",
+        "Indian Peafowl",
+        "Large Gray Babbler",
+        "Little Egret",
+        "Purple Sunbird",
+        "Purple-rumped Sunbird",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "Tree Pipit",
+        "White-browed Wagtail"
+      ]
+    },
+    {
+      "checklistId": "S406205799",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Black Kite",
+        "Brahminy Kite",
+        "Eurasian Coot",
+        "Gray Heron",
+        "Gray Wagtail",
+        "Great Cormorant",
+        "Indian Cormorant",
+        "Indian Pond-Heron",
+        "Indian Spot-billed Duck",
+        "Little Cormorant",
+        "Little Egret",
+        "Little Grebe",
+        "Medium Egret",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet"
+      ]
+    },
+    {
+      "checklistId": "S406205900",
+      "date": "2026-10-29",
+      "district": "Uttara Kannada",
+      "species": [
+        "Asian Koel",
+        "Black-hooded Oriole",
+        "Green Warbler",
+        "Greenish Warbler",
+        "Indian Peafowl",
+        "Malabar Gray Hornbill",
+        "Malabar Parakeet",
+        "Malabar Pied-Hornbill",
+        "Plum-headed Parakeet",
+        "Puff-throated Babbler",
+        "Red-vented Bulbul",
+        "Red-wattled Lapwing",
+        "Red-whiskered Bulbul",
+        "Spotted Dove",
+        "White-cheeked Barbet",
+        "White-throated Kingfisher"
+      ]
+    },
+    {
+      "checklistId": "S406206259",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Ashy Prinia",
+        "Asian Tit",
+        "Black Drongo",
+        "Black Kite",
+        "Black-headed Ibis",
+        "Brahminy Kite",
+        "Common Myna",
+        "Common Tailorbird",
+        "Dusky Crag-Martin",
+        "House Crow",
+        "Indian White-eye",
+        "Pale-billed Flowerpecker",
+        "Pied Bushchat",
+        "Purple-rumped Sunbird",
+        "Red-vented Bulbul",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "Spotted Dove",
+        "White-cheeked Barbet"
+      ]
+    },
+    {
+      "checklistId": "S406206588",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Ashy Prinia",
+        "Asian Openbill",
+        "Black Drongo",
+        "Black Kite",
+        "Black-headed Ibis",
+        "Blue-tailed Bee-eater",
+        "Brahminy Kite",
+        "Common Myna",
+        "Common Sandpiper",
+        "Eastern Red-rumped Swallow",
+        "Gray Wagtail",
+        "Great Cormorant",
+        "House Crow",
+        "Indian Gray Hornbill",
+        "Indian Paradise-Flycatcher",
+        "Indian Peafowl",
+        "Indian Pond-Heron",
+        "Indian Spot-billed Duck",
+        "Little Cormorant",
+        "Little Egret",
+        "Pied Bushchat",
+        "Purple-rumped Sunbird",
+        "Red-naped Ibis",
+        "Red-wattled Lapwing",
+        "Red-whiskered Bulbul",
+        "Rose-ringed Parakeet",
+        "Shikra",
+        "Spotted Dove",
+        "Tricolored Munia",
+        "White-breasted Waterhen",
+        "White-browed Wagtail",
+        "White-throated Kingfisher"
+      ]
+    },
+    {
+      "checklistId": "S406206774",
+      "date": "2026-10-29",
+      "district": "Bengaluru Rural",
+      "species": [
+        "Ashy Prinia",
+        "Ashy Woodswallow",
+        "Asian Green Bee-eater",
+        "Blue-tailed Bee-eater",
+        "Brown Shrike",
+        "Common Myna",
+        "Common Tailorbird",
+        "Eastern Cattle-Egret",
+        "Eastern Red-rumped Swallow",
+        "House Sparrow",
+        "Indian Silverbill",
+        "Oriental Magpie-Robin",
+        "Pale-billed Flowerpecker",
+        "Purple Sunbird",
+        "Purple-rumped Sunbird",
+        "Red-vented Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "Scaly-breasted Munia",
+        "Spotted Dove",
+        "White-browed Wagtail",
+        "White-throated Kingfisher",
+        "white egret sp."
+      ]
+    },
+    {
+      "checklistId": "S406207210",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Asian Palm Swift",
+        "Asian Tit",
+        "Black Drongo",
+        "Black Kite",
+        "Brahminy Kite",
+        "Common Tailorbird",
+        "Indian Gray Hornbill",
+        "Jungle Myna",
+        "Large-billed Crow",
+        "Little Egret",
+        "Oriental Magpie-Robin",
+        "Pale-billed Flowerpecker",
+        "Peregrine Falcon",
+        "Purple-rumped Sunbird",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "Shikra",
+        "Spotted Dove",
+        "White-cheeked Barbet"
+      ]
+    },
+    {
+      "checklistId": "S406207423",
+      "date": "2026-10-29",
+      "district": "Dakshina Kannada",
+      "species": [
+        "Asian Koel",
+        "Black Kite",
+        "Blue-tailed Bee-eater",
+        "Brahminy Kite",
+        "Common Myna",
+        "Common Tailorbird",
+        "House Crow",
+        "Loten's Sunbird",
+        "Oriental Magpie-Robin",
+        "Pale-billed Flowerpecker",
+        "Purple-rumped Sunbird",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "White-cheeked Barbet",
+        "White-rumped Munia"
+      ]
+    },
+    {
+      "checklistId": "S406208138",
+      "date": "2026-10-29",
+      "district": "Uttara Kannada",
+      "species": [
+        "Ashy Drongo",
+        "Ashy Woodswallow",
+        "Asian Green Bee-eater",
+        "Black Drongo",
+        "Brown Shrike",
+        "Chestnut-tailed Starling",
+        "Common Iora",
+        "Common Kingfisher",
+        "Common Myna",
+        "Common Tailorbird",
+        "Coppersmith Barbet",
+        "Eastern Cattle-Egret",
+        "European Roller",
+        "Greater Coucal",
+        "Green Warbler",
+        "Greenish Warbler",
+        "House Crow",
+        "Indian Golden Oriole",
+        "Indian Pond-Heron",
+        "Jungle Myna",
+        "Jungle/Yellow-billed Babbler",
+        "Large-billed Crow",
+        "Little Cormorant",
+        "Long-tailed Shrike",
+        "Oriental Magpie-Robin",
+        "Pied Bushchat",
+        "Pied Cuckoo",
+        "Purple Sunbird",
+        "Purple-rumped Sunbird",
+        "Red-vented Bulbul",
+        "Red-wattled Lapwing",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "Rosy Starling",
+        "Rufous Treepie",
+        "Shikra",
+        "Spotted Dove",
+        "Thick-billed Flowerpecker",
+        "Vernal Hanging-Parrot",
+        "White-breasted Waterhen",
+        "White-browed Wagtail",
+        "White-throated Kingfisher",
+        "Wire-tailed Swallow"
+      ]
+    },
+    {
+      "checklistId": "S406208336",
+      "date": "2026-10-29",
+      "district": "Shivamogga",
+      "species": [
+        "Asian Green Bee-eater",
+        "Blyth's Reed Warbler",
+        "Bronzed Drongo",
+        "Brown Shrike",
+        "Greater Racket-tailed Drongo",
+        "Lesser Yellownape",
+        "Malabar Flameback",
+        "Purple-rumped Sunbird",
+        "Red-whiskered Bulbul",
+        "Southern Hill Myna",
+        "Spotted Dove"
+      ]
+    },
+    {
+      "checklistId": "S406208375",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Black Kite",
+        "Common Myna",
+        "Common Tailorbird",
+        "House Crow",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "White-cheeked Barbet"
+      ]
+    },
+    {
+      "checklistId": "S406208376",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Common Myna",
+        "Common Tailorbird",
+        "Coppersmith Barbet",
+        "Greater Coucal",
+        "Greenish Warbler",
+        "Indian Gray Hornbill",
+        "Purple-rumped Sunbird",
+        "Red-naped Ibis",
+        "Shikra",
+        "White-cheeked Barbet"
+      ]
+    },
+    {
+      "checklistId": "S406208722",
+      "date": "2026-10-29",
+      "district": "Shivamogga",
+      "species": [
+        "Asian Green Bee-eater",
+        "Baya Weaver",
+        "Black Drongo",
+        "Black-headed Ibis",
+        "Black-winged Stilt",
+        "Blue-tailed Bee-eater",
+        "Brahminy Kite",
+        "Common Kingfisher",
+        "Common Myna",
+        "Common Sandpiper",
+        "Gray Heron",
+        "Gray-headed Swamphen",
+        "Great Cormorant",
+        "House Crow",
+        "Indian Cormorant",
+        "Indian Pond-Heron",
+        "Indian Spot-billed Duck",
+        "Jungle Myna",
+        "Lesser Whistling-Duck",
+        "Little Cormorant",
+        "Little Egret",
+        "Little Ringed Plover",
+        "Long-tailed Shrike",
+        "Malabar Pied-Hornbill",
+        "Medium Egret",
+        "Paddyfield Pipit",
+        "Painted Stork",
+        "Pied Bushchat",
+        "Red-vented Bulbul",
+        "Red-wattled Lapwing",
+        "Spotted Dove",
+        "White-breasted Waterhen",
+        "White-browed Wagtail",
+        "White-throated Kingfisher",
+        "Wire-tailed Swallow"
+      ]
+    },
+    {
+      "checklistId": "S406208776",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Asian Palm Swift",
+        "Asian Tit",
+        "Black Drongo",
+        "Black Kite",
+        "Brahminy Kite",
+        "Common Tailorbird",
+        "Indian Gray Hornbill",
+        "Jungle Myna",
+        "Large-billed Crow",
+        "Little Egret",
+        "Oriental Magpie-Robin",
+        "Pale-billed Flowerpecker",
+        "Peregrine Falcon",
+        "Purple-rumped Sunbird",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "Shikra",
+        "Spotted Dove",
+        "White-cheeked Barbet"
+      ]
+    },
+    {
+      "checklistId": "S406208968",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Ashy Prinia",
+        "Asian Brown Flycatcher",
+        "Asian Green Bee-eater",
+        "Asian Tit",
+        "Black Drongo",
+        "Black Kite",
+        "Black-headed Ibis",
+        "Blue-tailed Bee-eater",
+        "Brahminy Kite",
+        "Common Kingfisher",
+        "Common Myna",
+        "Common Sandpiper",
+        "Common Tailorbird",
+        "Coppersmith Barbet",
+        "Eastern Cattle-Egret",
+        "Eastern Red-rumped Swallow",
+        "Eurasian Coot",
+        "Eurasian Moorhen",
+        "Glossy Ibis",
+        "Gray Heron",
+        "Gray Wagtail",
+        "Gray-headed Swamphen",
+        "Greater Coucal",
+        "Green Sandpiper",
+        "Greenish Warbler",
+        "Indian Peafowl",
+        "Indian Pond-Heron",
+        "Indian Spot-billed Duck",
+        "Little Egret",
+        "Little Grebe",
+        "Medium Egret",
+        "Oriental Magpie-Robin",
+        "Pale-billed Flowerpecker",
+        "Purple-rumped Sunbird",
+        "Red-vented Bulbul",
+        "Red-wattled Lapwing",
+        "Red-whiskered Bulbul",
+        "Rose-ringed Parakeet",
+        "Scaly-breasted Munia",
+        "Spot-breasted Fantail",
+        "Spotted Dove",
+        "Western Yellow Wagtail",
+        "White-breasted Waterhen",
+        "White-cheeked Barbet",
+        "White-throated Kingfisher"
+      ]
+    },
+    {
+      "checklistId": "S406209240",
+      "date": "2026-10-29",
+      "district": "Mandya",
+      "species": [
+        "Ashy Drongo",
+        "Black Drongo",
+        "European Roller",
+        "House Crow",
+        "Indian Pond-Heron",
+        "Little Egret"
+      ]
+    },
+    {
+      "checklistId": "S406209353",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Ashy Prinia",
+        "Asian Openbill",
+        "Black Kite",
+        "Black-winged Stilt",
+        "Brahminy Kite",
+        "Common Myna",
+        "Common Tailorbird",
+        "Gray Heron",
+        "Great Cormorant",
+        "Greater Coucal",
+        "Indian Spot-billed Duck",
+        "Lesser Whistling-Duck",
+        "Little Cormorant",
+        "Little Egret",
+        "Little Grebe",
+        "Painted Stork",
+        "Purple Sunbird",
+        "Purple-rumped Sunbird",
+        "Red-vented Bulbul",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "White-cheeked Barbet",
+        "White-throated Kingfisher",
+        "Yellow-billed Babbler"
+      ]
+    },
+    {
+      "checklistId": "S406209702",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Common Myna",
+        "Jungle Myna"
+      ]
+    },
+    {
+      "checklistId": "S406209910",
+      "date": "2026-10-29",
+      "district": "Uttara Kannada",
+      "species": [
+        "Gray Junglefowl",
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406209940",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Alexandrine Parakeet",
+        "Ashy Prinia",
+        "Ashy Woodswallow",
+        "Asian Koel",
+        "Asian Tit",
+        "Barn Swallow",
+        "Black Drongo",
+        "Black Kite",
+        "Black-winged Stilt",
+        "Brahminy Kite",
+        "Common Myna",
+        "Common Tailorbird",
+        "Dusky Crag-Martin",
+        "Eastern Red-rumped Swallow (Daurian)",
+        "Eurasian Coot",
+        "Gray Wagtail",
+        "Greater Coucal (Southern)",
+        "Indian Pond-Heron",
+        "Indian Spot-billed Duck",
+        "Jungle Myna",
+        "Large-billed Crow (Indian Jungle)",
+        "Little Grebe",
+        "Pale-billed Flowerpecker",
+        "Pied Bushchat",
+        "Pied Kingfisher",
+        "Purple Heron",
+        "Purple-rumped Sunbird",
+        "Red-wattled Lapwing",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "White-browed Wagtail",
+        "White-cheeked Barbet",
+        "White-throated Kingfisher"
+      ]
+    },
+    {
+      "checklistId": "S406210221",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Ashy Prinia",
+        "Asian Green Bee-eater",
+        "Asian Koel",
+        "Asian Tit (Cinereous)",
+        "Black Kite",
+        "Common Iora",
+        "Common Myna",
+        "Common Tailorbird",
+        "Gray-breasted Prinia",
+        "Greenish Warbler",
+        "Indian Cuckooshrike",
+        "Indian Robin",
+        "Indian Silverbill",
+        "Indian White-eye",
+        "Oriental Magpie-Robin",
+        "Pale-billed Flowerpecker",
+        "Plain Prinia",
+        "Puff-throated Babbler",
+        "Purple-rumped Sunbird",
+        "Red-vented Bulbul",
+        "Red-whiskered Bulbul",
+        "Rose-ringed Parakeet",
+        "Scaly-breasted Munia",
+        "Spot-breasted Fantail",
+        "Spotted Dove",
+        "Tawny-bellied Babbler",
+        "Tickell's Blue Flycatcher",
+        "White-browed Bulbul",
+        "White-cheeked Barbet",
+        "Yellow-billed Babbler",
+        "Yellow-eyed Babbler"
+      ]
+    },
+    {
+      "checklistId": "S406210243",
+      "date": "2026-10-29",
+      "district": "Kalaburagi",
+      "species": [
+        "Ashy Prinia",
+        "Asian Green Bee-eater",
+        "Asian Koel",
+        "Asian Tit",
+        "Black Drongo",
+        "Black Kite",
+        "Brown Shrike",
+        "Common Hoopoe",
+        "Common Tailorbird",
+        "Coppersmith Barbet",
+        "Gray Junglefowl",
+        "Greater Coucal",
+        "Greenish Warbler",
+        "Indian Peafowl",
+        "Laughing Dove",
+        "Oriental Honey-buzzard",
+        "Oriental Magpie-Robin",
+        "Pale-billed Flowerpecker",
+        "Purple Sunbird",
+        "Purple-rumped Sunbird",
+        "Red-vented Bulbul",
+        "Red-whiskered Bulbul",
+        "Rose-ringed Parakeet",
+        "Rufous Treepie",
+        "Small Minivet",
+        "Spotted Dove",
+        "White-browed Bulbul",
+        "White-cheeked Barbet",
+        "Yellow-billed Babbler"
+      ]
+    },
+    {
+      "checklistId": "S406210294",
+      "date": "2026-10-29",
+      "district": "Bengaluru Rural",
+      "species": []
+    },
+    {
+      "checklistId": "S406210476",
+      "date": "2026-10-29",
+      "district": "Bengaluru Rural",
+      "species": [
+        "Black Drongo",
+        "Common Hoopoe"
+      ]
+    },
+    {
+      "checklistId": "S406210602",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Black Kite",
+        "House Crow",
+        "Large-billed Crow",
+        "Oriental Magpie-Robin",
+        "Shikra"
+      ]
+    },
+    {
+      "checklistId": "S406210735",
+      "date": "2026-10-29",
+      "district": "Chikkamagaluru",
+      "species": [
+        "Ashy Prinia",
+        "Ashy-crowned Sparrow-Lark",
+        "Asian Green Bee-eater",
+        "Asian Openbill",
+        "Asian Palm Swift",
+        "Asian Tit",
+        "Barn Swallow",
+        "Black Drongo",
+        "Black-headed Ibis",
+        "Black-winged Stilt",
+        "Blue-tailed Bee-eater",
+        "Blyth's Reed Warbler",
+        "Common Greenshank",
+        "Common Kingfisher",
+        "Common Myna",
+        "Common Sandpiper",
+        "Common Snipe",
+        "Common Tailorbird",
+        "Eastern Cattle-Egret",
+        "Eastern Yellow Wagtail",
+        "Eurasian Collared-Dove",
+        "Eurasian Coot",
+        "Eurasian Spoonbill",
+        "Garganey",
+        "Glossy Ibis",
+        "Gray Francolin",
+        "Gray Heron",
+        "Great Cormorant",
+        "Great Egret",
+        "Greater Coucal",
+        "Green-winged Teal",
+        "Indian Peafowl",
+        "Indian Pond-Heron",
+        "Indian Robin",
+        "Indian Spot-billed Duck",
+        "Jungle Myna",
+        "Kentish Plover",
+        "Laughing Dove",
+        "Little Cormorant",
+        "Little Egret",
+        "Little Grebe",
+        "Little Ringed Plover",
+        "Little Stint",
+        "Long-tailed Shrike",
+        "Medium Egret",
+        "Northern Pintail",
+        "Northern Shoveler",
+        "Oriental Darter",
+        "Oriental Skylark",
+        "Paddyfield Pipit",
+        "Paddyfield/Blyth's Reed Warbler",
+        "Painted Stork",
+        "Pale-billed Flowerpecker",
+        "Pied Bushchat",
+        "Pied Kingfisher",
+        "Pin-tailed Snipe",
+        "Pin-tailed/Common Snipe",
+        "Plain Prinia",
+        "Purple Heron",
+        "Purple Sunbird",
+        "Red-necked Falcon",
+        "Red-vented Bulbul",
+        "Red-wattled Lapwing",
+        "Red-whiskered Bulbul",
+        "Red-whiskered/Red-vented Bulbul",
+        "River Tern",
+        "Rose-ringed Parakeet",
+        "Rosy Starling",
+        "Ruff",
+        "Scaly-breasted Munia",
+        "Siberian Stonechat",
+        "Small Pratincole",
+        "Spotted Dove",
+        "Streak-throated Swallow",
+        "Temminck's Stint",
+        "Western/Eastern Yellow Wagtail",
+        "White-browed Wagtail",
+        "White-throated Kingfisher",
+        "Wire-tailed Swallow",
+        "Wood Sandpiper",
+        "Zitting Cisticola",
+        "peep sp.",
+        "pipit sp."
+      ]
+    },
+    {
+      "checklistId": "S406210823",
+      "date": "2026-10-29",
+      "district": "Tumakuru",
+      "species": [
+        "Ashy Prinia",
+        "Asian Green Bee-eater",
+        "Black Eagle",
+        "Common Myna",
+        "Common Tailorbird",
+        "Eastern Red-rumped Swallow",
+        "Eurasian Collared-Dove",
+        "Indian Robin",
+        "Oriental Magpie-Robin",
+        "Pied Bushchat",
+        "Rose-ringed Parakeet",
+        "Spotted Dove",
+        "White-browed Wagtail"
+      ]
+    },
+    {
+      "checklistId": "S406211047",
+      "date": "2026-10-29",
+      "district": "Dakshina Kannada",
+      "species": [
+        "Black Kite",
+        "Brahminy Kite",
+        "White-bellied Sea-Eagle"
+      ]
+    },
+    {
+      "checklistId": "S406211249",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Brown Shrike",
+        "Tricolored Munia"
+      ]
+    },
+    {
+      "checklistId": "S406211582",
+      "date": "2026-10-29",
+      "district": "Chitradurga",
+      "species": [
+        "Black-winged Kite",
+        "Common Tailorbird",
+        "Eastern Cattle-Egret",
+        "Eurasian Collared-Dove",
+        "Large Gray Babbler",
+        "Long-tailed Shrike",
+        "Red-vented Bulbul",
+        "Rock Pigeon (Feral Pigeon)"
+      ]
+    },
+    {
+      "checklistId": "S406211635",
+      "date": "2026-10-29",
+      "district": "Chikkaballapura",
+      "species": [
+        "Asian Green Bee-eater",
+        "Brahminy Kite",
+        "Brown Shrike",
+        "Eastern Cattle-Egret",
+        "Greater Racket-tailed Drongo",
+        "Indian Pond-Heron",
+        "Indian Roller",
+        "Malabar Barbet",
+        "Orange Minivet",
+        "Purple-rumped Sunbird",
+        "Red-wattled Lapwing",
+        "Rock Pigeon (Feral Pigeon)",
+        "Spotted Dove",
+        "White-throated Kingfisher"
+      ]
+    },
+    {
+      "checklistId": "S406211979",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Asian Tit",
+        "Common Tailorbird",
+        "Pale-billed Flowerpecker",
+        "Purple Sunbird",
+        "White-cheeked Barbet"
+      ]
+    },
+    {
+      "checklistId": "S406212447",
+      "date": "2026-10-29",
+      "district": "Ballari",
+      "species": [
+        "Common Myna",
+        "House Crow",
+        "Purple-rumped Sunbird",
+        "Rock Pigeon (Feral Pigeon)"
+      ]
+    },
+    {
+      "checklistId": "S406212978",
+      "date": "2026-10-29",
+      "district": "Mandya",
+      "species": [
+        "Greater Spotted Eagle"
+      ]
+    },
+    {
+      "checklistId": "S406213027",
+      "date": "2026-10-29",
+      "district": "Dakshina Kannada",
+      "species": [
+        "Asian Green Bee-eater",
+        "Asian Koel",
+        "Black Kite",
+        "Blue-tailed Bee-eater",
+        "Brahminy Kite",
+        "Common Tailorbird",
+        "House Crow",
+        "Large-billed Crow",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Whiskered Tern",
+        "White-bellied Sea-Eagle"
+      ]
+    },
+    {
+      "checklistId": "S406213141",
+      "date": "2026-10-29",
+      "district": "Koppal",
+      "species": [
+        "Common Tailorbird",
+        "House Crow",
+        "Red-vented Bulbul"
+      ]
+    },
+    {
+      "checklistId": "S406213202",
+      "date": "2026-10-29",
+      "district": "Bengaluru Rural",
+      "species": [
+        "Asian Koel"
+      ]
+    },
+    {
+      "checklistId": "S406213398",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406213400",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406213449",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Spotted Dove"
+      ]
+    },
+    {
+      "checklistId": "S406213465",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Greater Coucal",
+        "Lesser Whistling-Duck"
+      ]
+    },
+    {
+      "checklistId": "S406213535",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Gray Junglefowl"
+      ]
+    },
+    {
+      "checklistId": "S406213753",
+      "date": "2026-10-29",
+      "district": "Chikkaballapura",
+      "species": []
+    },
+    {
+      "checklistId": "S406213825",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Asian Koel",
+        "Black-crowned Night Heron",
+        "Common Kingfisher",
+        "Gray Heron",
+        "Great Cormorant",
+        "Indian Paradise-Flycatcher",
+        "Indian Pond-Heron",
+        "Little Cormorant",
+        "Little Egret",
+        "Little Grebe",
+        "Purple-rumped Sunbird",
+        "Rock Pigeon (Feral Pigeon)",
+        "Taiga Flycatcher",
+        "White-throated Kingfisher"
+      ]
+    },
+    {
+      "checklistId": "S406214026",
+      "date": "2026-10-29",
+      "district": "Uttara Kannada",
+      "species": [
+        "Asian Green Bee-eater",
+        "Blue-tailed Bee-eater",
+        "Greenish Warbler",
+        "Indian Peafowl",
+        "Jungle Babbler",
+        "Pale-billed Flowerpecker",
+        "Rufous Woodpecker",
+        "Spotted Dove"
+      ]
+    },
+    {
+      "checklistId": "S406214093",
+      "date": "2026-10-29",
+      "district": "Uttara Kannada",
+      "species": [
+        "Ashy Prinia",
+        "Asian Koel",
+        "Black Drongo",
+        "Brown Shrike",
+        "Common Myna",
+        "Coppersmith Barbet",
+        "Eastern Red-rumped Swallow",
+        "Great Cormorant",
+        "House Crow",
+        "House Sparrow",
+        "Indian Gray Hornbill",
+        "Indian Pond-Heron",
+        "Jerdon's Leafbird",
+        "Jungle Myna",
+        "Little Swift",
+        "Oriental Magpie-Robin",
+        "Plum-headed Parakeet",
+        "Purple Sunbird",
+        "Purple-rumped Sunbird",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "Spotted Dove",
+        "Taiga Flycatcher",
+        "Yellow-footed Green-Pigeon"
+      ]
+    },
+    {
+      "checklistId": "S406214281",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Ashy Drongo",
+        "Ashy Prinia",
+        "Asian Green Bee-eater",
+        "Asian Koel",
+        "Asian Palm Swift",
+        "Asian Tit",
+        "Barn Swallow",
+        "Baya Weaver",
+        "Black Drongo",
+        "Black Kite",
+        "Black-headed Bunting",
+        "Black-rumped Flameback",
+        "Black-winged Kite",
+        "Black-winged Stilt",
+        "Blue-faced Malkoha",
+        "Blue-tailed Bee-eater",
+        "Blyth's Reed Warbler",
+        "Booted Eagle",
+        "Brahminy Kite",
+        "Brahminy Starling",
+        "Brown Shrike",
+        "Common Hawk-Cuckoo",
+        "Common Iora",
+        "Common Kingfisher",
+        "Common Myna",
+        "Common Tailorbird",
+        "Coppersmith Barbet",
+        "Eastern Cattle-Egret",
+        "Eastern Red-rumped Swallow",
+        "Eurasian Collared-Dove",
+        "Eurasian Kestrel",
+        "Eurasian Moorhen",
+        "Glossy Ibis",
+        "Gray Francolin",
+        "Gray Heron",
+        "Gray-bellied Cuckoo",
+        "Great Cormorant",
+        "Greater Coucal",
+        "Green Sandpiper",
+        "Greenish Warbler",
+        "House Crow",
+        "Indian Golden Oriole",
+        "Indian Peafowl",
+        "Indian Pond-Heron",
+        "Indian Robin",
+        "Indian Silverbill",
+        "Indian Spot-billed Duck",
+        "Indian White-eye",
+        "Jerdon's Bushlark",
+        "Jungle Prinia",
+        "Large-billed Crow",
+        "Laughing Dove",
+        "Lesser Whitethroat",
+        "Little Cormorant",
+        "Little Egret",
+        "Little Grebe",
+        "Little Swift",
+        "Oriental Darter",
+        "Oriental Honey-buzzard",
+        "Oriental Magpie-Robin",
+        "Pale-billed Flowerpecker",
+        "Pied Bushchat",
+        "Pied Cuckoo",
+        "Pied Kingfisher",
+        "Plain Prinia",
+        "Purple Heron",
+        "Purple Sunbird",
+        "Purple-rumped Sunbird",
+        "Red Avadavat",
+        "Red-vented Bulbul",
+        "Red-wattled Lapwing",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "Rufous Treepie",
+        "Scaly-breasted Munia",
+        "Small Minivet",
+        "Spot-breasted Fantail",
+        "Spotted Dove",
+        "Spotted Owlet",
+        "Streak-throated Swallow",
+        "Sykes's Warbler",
+        "Tree Pipit",
+        "Tricolored Munia",
+        "Western Marsh Harrier",
+        "White-breasted Waterhen",
+        "White-browed Bulbul",
+        "White-browed Wagtail",
+        "White-cheeked Barbet",
+        "White-rumped Munia",
+        "White-throated Kingfisher",
+        "Wood Sandpiper",
+        "Yellow-billed Babbler",
+        "Yellow-eyed Babbler",
+        "Zitting Cisticola",
+        "tern sp."
+      ]
+    },
+    {
+      "checklistId": "S406214573",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406214662",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Gray Junglefowl"
+      ]
+    },
+    {
+      "checklistId": "S406214774",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406214776",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Asian Koel"
+      ]
+    },
+    {
+      "checklistId": "S406214824",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Ashy Drongo",
+        "Ashy Prinia",
+        "Asian Green Bee-eater",
+        "Asian Koel",
+        "Asian Palm Swift",
+        "Asian Tit",
+        "Barn Swallow",
+        "Baya Weaver",
+        "Black Drongo",
+        "Black Kite",
+        "Black-headed Bunting",
+        "Black-rumped Flameback",
+        "Black-winged Kite",
+        "Black-winged Stilt",
+        "Blue-faced Malkoha",
+        "Blue-tailed Bee-eater",
+        "Blyth's Reed Warbler",
+        "Booted Eagle",
+        "Brahminy Kite",
+        "Brahminy Starling",
+        "Brown Shrike",
+        "Common Hawk-Cuckoo",
+        "Common Iora",
+        "Common Kingfisher",
+        "Common Myna",
+        "Common Tailorbird",
+        "Coppersmith Barbet",
+        "Eastern Cattle-Egret",
+        "Eastern Red-rumped Swallow",
+        "Eurasian Collared-Dove",
+        "Eurasian Kestrel",
+        "Eurasian Moorhen",
+        "Glossy Ibis",
+        "Gray Francolin",
+        "Gray Heron",
+        "Gray-bellied Cuckoo",
+        "Great Cormorant",
+        "Greater Coucal",
+        "Green Sandpiper",
+        "Greenish Warbler",
+        "House Crow",
+        "Indian Golden Oriole",
+        "Indian Peafowl",
+        "Indian Pond-Heron",
+        "Indian Robin",
+        "Indian Silverbill",
+        "Indian Spot-billed Duck",
+        "Indian White-eye",
+        "Jerdon's Bushlark",
+        "Jungle Prinia",
+        "Large-billed Crow",
+        "Laughing Dove",
+        "Lesser Whitethroat",
+        "Little Cormorant",
+        "Little Egret",
+        "Little Grebe",
+        "Little Swift",
+        "Oriental Darter",
+        "Oriental Honey-buzzard",
+        "Oriental Magpie-Robin",
+        "Pale-billed Flowerpecker",
+        "Pied Bushchat",
+        "Pied Cuckoo",
+        "Pied Kingfisher",
+        "Plain Prinia",
+        "Purple Heron",
+        "Purple Sunbird",
+        "Purple-rumped Sunbird",
+        "Red Avadavat",
+        "Red-vented Bulbul",
+        "Red-wattled Lapwing",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "Rufous Treepie",
+        "Scaly-breasted Munia",
+        "Small Minivet",
+        "Spot-breasted Fantail",
+        "Spotted Dove",
+        "Spotted Owlet",
+        "Streak-throated Swallow",
+        "Sykes's Warbler",
+        "Tree Pipit",
+        "Tricolored Munia",
+        "Western Marsh Harrier",
+        "White-breasted Waterhen",
+        "White-browed Bulbul",
+        "White-browed Wagtail",
+        "White-cheeked Barbet",
+        "White-rumped Munia",
+        "White-throated Kingfisher",
+        "Wood Sandpiper",
+        "Yellow-billed Babbler",
+        "Yellow-eyed Babbler",
+        "Zitting Cisticola",
+        "tern sp."
+      ]
+    },
+    {
+      "checklistId": "S406214836",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406214840",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406214902",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406215022",
+      "date": "2026-10-29",
+      "district": "Mandya",
+      "species": [
+        "Brahminy Kite",
+        "Oriental Honey-buzzard"
+      ]
+    },
+    {
+      "checklistId": "S406215114",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406215276",
+      "date": "2026-10-29",
+      "district": "Chikkamagaluru",
+      "species": [
+        "Asian Green Bee-eater",
+        "Asian Openbill",
+        "Bay-backed Shrike",
+        "Black Drongo",
+        "Black Kite",
+        "Black-headed Ibis",
+        "Black-winged Kite",
+        "Black-winged Stilt",
+        "Blue-tailed Bee-eater",
+        "Brahminy Kite",
+        "Common Greenshank",
+        "Common Myna",
+        "Common Sandpiper",
+        "Eurasian Collared-Dove",
+        "European Roller",
+        "Garganey",
+        "Glossy Ibis",
+        "Gray Heron",
+        "Indian Pond-Heron",
+        "Indian Robin",
+        "Indian Spot-billed Duck",
+        "Little Egret",
+        "Northern Shoveler",
+        "Oriental Skylark",
+        "Paddyfield Pipit",
+        "Pied Bushchat",
+        "Purple Heron",
+        "Red Collared-Dove",
+        "Red-necked Falcon",
+        "Red-wattled Lapwing",
+        "River Tern",
+        "White-throated Kingfisher",
+        "Wood Sandpiper",
+        "cormorant/shag sp.",
+        "crow sp.",
+        "swallow sp."
+      ]
+    },
+    {
+      "checklistId": "S406215432",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Asian Koel",
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406215531",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Asian Koel"
+      ]
+    },
+    {
+      "checklistId": "S406215679",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Brahminy Kite"
+      ]
+    },
+    {
+      "checklistId": "S406215687",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Gray Junglefowl",
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406215753",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Pied Kingfisher"
+      ]
+    },
+    {
+      "checklistId": "S406215813",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Yellow-footed Green-Pigeon"
+      ]
+    },
+    {
+      "checklistId": "S406215877",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Little Cormorant"
+      ]
+    },
+    {
+      "checklistId": "S406215901",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406215922",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406215941",
+      "date": "2026-10-29",
+      "district": "Gadag",
+      "species": [
+        "Ashy Prinia",
+        "Asian Green Bee-eater",
+        "Asian Koel",
+        "Barn Swallow",
+        "Bay-backed Shrike",
+        "Black Drongo",
+        "Black-winged Stilt",
+        "Brahminy Kite",
+        "Brahminy Starling",
+        "Brown Shrike",
+        "Common Hoopoe",
+        "Common Myna",
+        "Common Sandpiper",
+        "Common Tailorbird",
+        "Eurasian Collared-Dove",
+        "Eurasian Coot",
+        "Gray Francolin",
+        "Gray Heron",
+        "Greater Coucal",
+        "House Crow",
+        "House Sparrow",
+        "Indian Peafowl",
+        "Indian Pond-Heron",
+        "Indian Robin",
+        "Indian Roller",
+        "Indian Thick-knee",
+        "Large Gray Babbler",
+        "Laughing Dove",
+        "Little Cormorant",
+        "Little Egret",
+        "Little Grebe",
+        "Long-tailed Shrike",
+        "Painted Stork",
+        "Pied Kingfisher",
+        "Purple-rumped Sunbird",
+        "Red-vented Bulbul",
+        "Red-wattled Lapwing",
+        "Rose-ringed Parakeet",
+        "Scaly-breasted Munia",
+        "White-breasted Waterhen",
+        "White-browed Wagtail",
+        "White-throated Kingfisher",
+        "Wood Sandpiper",
+        "Yellow-wattled Lapwing"
+      ]
+    },
+    {
+      "checklistId": "S406215973",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Shikra"
+      ]
+    },
+    {
+      "checklistId": "S406216039",
+      "date": "2026-10-29",
+      "district": "Chikkaballapura",
+      "species": [
+        "Asian Koel",
+        "Gray Francolin",
+        "Gray-headed Swamphen",
+        "Indian Cormorant",
+        "Indian Peafowl",
+        "Little Cormorant",
+        "Red-wattled Lapwing",
+        "Spotted Dove"
+      ]
+    },
+    {
+      "checklistId": "S406216501",
+      "date": "2026-10-29",
+      "district": "Ballari",
+      "species": [
+        "Gray Francolin",
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406216702",
+      "date": "2026-10-29",
+      "district": "Chikkaballapura",
+      "species": [
+        "Greater Coucal",
+        "Spotted Dove"
+      ]
+    },
+    {
+      "checklistId": "S406216703",
+      "date": "2026-10-29",
+      "district": "Chikkaballapura",
+      "species": [
+        "Oriental Darter",
+        "Spotted Dove",
+        "White-cheeked Barbet"
+      ]
+    },
+    {
+      "checklistId": "S406217678",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Black Drongo",
+        "Black Kite",
+        "Common Tailorbird",
+        "Greater Coucal",
+        "Large-billed Crow",
+        "Purple-rumped Sunbird",
+        "Red-whiskered Bulbul",
+        "Shikra",
+        "White-cheeked Barbet"
+      ]
+    },
+    {
+      "checklistId": "S406217715",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Ashy Drongo",
+        "Asian Tit",
+        "Black Kite",
+        "Indian White-eye",
+        "Large-billed Crow",
+        "Oriental Magpie-Robin",
+        "Pale-billed Flowerpecker",
+        "Purple Sunbird",
+        "Purple-rumped Sunbird",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Taiga Flycatcher",
+        "White-cheeked Barbet"
+      ]
+    },
+    {
+      "checklistId": "S406217741",
+      "date": "2026-10-29",
+      "district": "Udupi",
+      "species": [
+        "Ashy Drongo",
+        "Ashy Woodswallow",
+        "Asian Green Bee-eater",
+        "Asian Koel",
+        "Asian Openbill",
+        "Asian Palm Swift",
+        "Barn Swallow",
+        "Black Drongo",
+        "Black Kite",
+        "Black-headed Ibis",
+        "Black-hooded Oriole",
+        "Black-rumped Flameback",
+        "Blue-tailed Bee-eater",
+        "Blyth's Reed Warbler",
+        "Brahminy Kite",
+        "Bronze-winged Jacana",
+        "Brown Shrike",
+        "Common Cuckoo",
+        "Common Iora",
+        "Common Kingfisher",
+        "Common Myna",
+        "Common Sandpiper",
+        "Common Tailorbird",
+        "Coppersmith Barbet",
+        "Cotton Pygmy-Goose",
+        "Eastern Cattle-Egret",
+        "Eurasian Moorhen",
+        "Garganey",
+        "Glossy Ibis",
+        "Golden-fronted Leafbird",
+        "Gray Heron",
+        "Gray-headed Swamphen",
+        "Great Egret",
+        "Greater Coucal (Southern)",
+        "Greater Racket-tailed Drongo",
+        "Green Warbler",
+        "House Crow",
+        "Indian Cormorant",
+        "Indian Golden Oriole",
+        "Indian Paradise-Flycatcher",
+        "Indian Peafowl",
+        "Indian Pond-Heron",
+        "Jungle Babbler",
+        "Jungle Myna",
+        "Large-billed Crow (Indian Jungle)",
+        "Lesser Whistling-Duck",
+        "Little Cormorant",
+        "Little Egret",
+        "Little Grebe",
+        "Loten's Sunbird",
+        "Malabar Pied-Hornbill",
+        "Northern Pintail",
+        "Oriental Darter",
+        "Oriental Magpie-Robin",
+        "Pale-billed Flowerpecker",
+        "Pied Bushchat",
+        "Pied Kingfisher",
+        "Plain Prinia",
+        "Plum-headed Parakeet",
+        "Purple Heron",
+        "Purple-rumped Sunbird",
+        "Red-vented Bulbul",
+        "Red-wattled Lapwing",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "Rufous Treepie",
+        "Rufous Woodpecker",
+        "Scaly-breasted Munia",
+        "Shikra",
+        "Spotted Dove",
+        "Sykes's Warbler",
+        "Vernal Hanging-Parrot",
+        "Western Marsh Harrier",
+        "White-breasted Waterhen",
+        "White-browed Wagtail",
+        "White-cheeked Barbet",
+        "White-throated Kingfisher",
+        "Wire-tailed Swallow",
+        "Yellow Bittern",
+        "Yellow-footed Green-Pigeon",
+        "rail/crake sp."
+      ]
+    },
+    {
+      "checklistId": "S406218492",
+      "date": "2026-10-29",
+      "district": "Ballari",
+      "species": [
+        "Lesser Whistling-Duck"
+      ]
+    },
+    {
+      "checklistId": "S406218757",
+      "date": "2026-10-29",
+      "district": "Gadag",
+      "species": [
+        "Eurasian Kestrel",
+        "European Roller",
+        "Indian Roller"
+      ]
+    },
+    {
+      "checklistId": "S406218844",
+      "date": "2026-10-29",
+      "district": "Chikkaballapura",
+      "species": [
+        "Green Imperial-Pigeon",
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406218846",
+      "date": "2026-10-29",
+      "district": "Chikkaballapura",
+      "species": [
+        "Gray-fronted Green-Pigeon",
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406218854",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406218855",
+      "date": "2026-10-29",
+      "district": "Chikkaballapura",
+      "species": []
+    },
+    {
+      "checklistId": "S406219249",
+      "date": "2026-10-29",
+      "district": "Ballari",
+      "species": [
+        "Gray Heron"
+      ]
+    },
+    {
+      "checklistId": "S406219279",
+      "date": "2026-10-29",
+      "district": "Ballari",
+      "species": [
+        "Knob-billed Duck",
+        "Lesser Whistling-Duck"
+      ]
+    },
+    {
+      "checklistId": "S406219283",
+      "date": "2026-10-29",
+      "district": "Ballari",
+      "species": []
+    },
+    {
+      "checklistId": "S406219393",
+      "date": "2026-10-29",
+      "district": "Ballari",
+      "species": [
+        "Oriental Turtle-Dove",
+        "Swinhoe's/Pin-tailed Snipe"
+      ]
+    },
+    {
+      "checklistId": "S406219461",
+      "date": "2026-10-29",
+      "district": "Ballari",
+      "species": [
+        "Eurasian Collared-Dove",
+        "Laughing Dove",
+        "Oriental Turtle-Dove",
+        "Red Collared-Dove"
+      ]
+    },
+    {
+      "checklistId": "S406219474",
+      "date": "2026-10-29",
+      "district": "Ballari",
+      "species": [
+        "Eurasian Collared-Dove",
+        "Oriental Turtle-Dove",
+        "Red Collared-Dove"
+      ]
+    },
+    {
+      "checklistId": "S406219541",
+      "date": "2026-10-29",
+      "district": "Ballari",
+      "species": [
+        "Common Babbler",
+        "Cuculus sp.",
+        "Indian Peafowl",
+        "Red-breasted Flycatcher",
+        "Siberian Stonechat",
+        "Streaked Weaver",
+        "White-rumped Munia",
+        "duck sp."
+      ]
+    },
+    {
+      "checklistId": "S406219545",
+      "date": "2026-10-29",
+      "district": "Ballari",
+      "species": [
+        "Indian Peafowl",
+        "Indian Spot-billed Duck"
+      ]
+    },
+    {
+      "checklistId": "S406219556",
+      "date": "2026-10-29",
+      "district": "Ballari",
+      "species": [
+        "Rock Pigeon (Feral Pigeon)"
+      ]
+    },
+    {
+      "checklistId": "S406219629",
+      "date": "2026-10-29",
+      "district": "Ballari",
+      "species": [
+        "Lesser Whistling-Duck",
+        "Painted Sandgrouse"
+      ]
+    },
+    {
+      "checklistId": "S406219643",
+      "date": "2026-10-29",
+      "district": "Ballari",
+      "species": [
+        "Greater Coucal",
+        "Spotted Dove"
+      ]
+    },
+    {
+      "checklistId": "S406219796",
+      "date": "2026-10-29",
+      "district": "Chikkaballapura",
+      "species": []
+    },
+    {
+      "checklistId": "S406219836",
+      "date": "2026-10-29",
+      "district": "Chitradurga",
+      "species": [
+        "Common Myna",
+        "Large Gray Babbler"
+      ]
+    },
+    {
+      "checklistId": "S406220088",
+      "date": "2026-10-29",
+      "district": "Chikkaballapura",
+      "species": [
+        "Gray Junglefowl",
+        "Indian Peafowl",
+        "Spotted Dove"
+      ]
+    },
+    {
+      "checklistId": "S406221381",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Great Cormorant"
+      ]
+    },
+    {
+      "checklistId": "S406221910",
+      "date": "2026-10-29",
+      "district": "Chikkaballapura",
+      "species": [
+        "Crimson-backed Sunbird"
+      ]
+    },
+    {
+      "checklistId": "S406221941",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Asian Green Bee-eater",
+        "Asian Koel",
+        "Barn Swallow",
+        "Baya Weaver",
+        "Black Drongo",
+        "Black Kite",
+        "Brahminy Starling",
+        "Brown Shrike",
+        "Common Myna",
+        "Eastern Red-rumped Swallow",
+        "Gray Heron",
+        "Great Egret",
+        "Greater Coucal",
+        "Indian Peafowl",
+        "Indian Robin",
+        "Indian White-eye",
+        "Little Egret",
+        "Oriental Honey-buzzard",
+        "Paddyfield Pipit",
+        "Pied Bushchat",
+        "Pied Cuckoo",
+        "Purple Heron",
+        "Red-vented Bulbul",
+        "Red-wattled Lapwing",
+        "Red-whiskered Bulbul",
+        "Rose-ringed Parakeet",
+        "Rosy Starling",
+        "Scaly-breasted Munia",
+        "Spotted Dove",
+        "Western Marsh Harrier",
+        "White-throated Kingfisher"
+      ]
+    },
+    {
+      "checklistId": "S406222369",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Black Kite",
+        "Common Tailorbird",
+        "House Crow",
+        "Large-billed Crow",
+        "Pale-billed Flowerpecker",
+        "Purple-rumped Sunbird",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "Shikra",
+        "White-cheeked Barbet"
+      ]
+    },
+    {
+      "checklistId": "S406222385",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Little Cormorant"
+      ]
+    },
+    {
+      "checklistId": "S406223350",
+      "date": "2026-10-29",
+      "district": "Chikkaballapura",
+      "species": [
+        "Green Warbler"
+      ]
+    },
+    {
+      "checklistId": "S406223584",
+      "date": "2026-10-29",
+      "district": "Kalaburagi",
+      "species": [
+        "Indian White-eye"
+      ]
+    },
+    {
+      "checklistId": "S406223593",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Black Kite",
+        "Common Myna",
+        "Red-breasted Flycatcher",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "White-cheeked Barbet"
+      ]
+    },
+    {
+      "checklistId": "S406223595",
+      "date": "2026-10-29",
+      "district": "Ballari",
+      "species": [
+        "Brown Rock Chat"
+      ]
+    },
+    {
+      "checklistId": "S406224301",
+      "date": "2026-10-29",
+      "district": "Ballari",
+      "species": [
+        "Greenish Warbler"
+      ]
+    },
+    {
+      "checklistId": "S406224390",
+      "date": "2026-10-29",
+      "district": "Chikkaballapura",
+      "species": [
+        "Spotted Dove"
+      ]
+    },
+    {
+      "checklistId": "S406224402",
+      "date": "2026-10-29",
+      "district": "Chikkaballapura",
+      "species": [
+        "Gray Junglefowl",
+        "Indian Peafowl",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)"
+      ]
+    },
+    {
+      "checklistId": "S406224597",
+      "date": "2026-10-29",
+      "district": "Ballari",
+      "species": [
+        "Greenish Warbler"
+      ]
+    },
+    {
+      "checklistId": "S406224882",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Asian Openbill",
+        "Barn Swallow",
+        "Baya Weaver",
+        "Black Drongo",
+        "Black Kite",
+        "Black-winged Kite",
+        "Blue-tailed Bee-eater",
+        "Blyth's Reed Warbler",
+        "Brahminy Kite",
+        "Brown Shrike",
+        "Common Hoopoe",
+        "Common Myna",
+        "Common Sandpiper",
+        "Eastern Red-rumped Swallow",
+        "Eurasian Collared-Dove",
+        "Eurasian Coot",
+        "Eurasian Kestrel",
+        "Eurasian Moorhen",
+        "European Roller",
+        "Glossy Ibis",
+        "Gray Heron",
+        "Gray-headed Swamphen",
+        "Greater Spotted Eagle",
+        "Indian Pond-Heron",
+        "Indian Robin",
+        "Indian Roller",
+        "Indian Spotted Eagle",
+        "Jungle Myna",
+        "Lesser Kestrel",
+        "Little Cormorant",
+        "Little Egret",
+        "Little Swift",
+        "Montagu's Harrier",
+        "Oriental Darter",
+        "Oriental Skylark",
+        "Paddyfield Pipit",
+        "Painted Stork",
+        "Peregrine Falcon",
+        "Pied Bushchat",
+        "Plain Prinia",
+        "Purple Heron",
+        "Red Avadavat",
+        "Red Collared-Dove",
+        "Red-wattled Lapwing",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "Siberian Stonechat",
+        "Spotted Dove",
+        "Tricolored Munia",
+        "Western Marsh Harrier",
+        "White-browed Wagtail",
+        "White-throated Kingfisher",
+        "Zitting Cisticola"
+      ]
+    },
+    {
+      "checklistId": "S406224897",
+      "date": "2026-10-29",
+      "district": "Ballari",
+      "species": [
+        "Greenish Warbler"
+      ]
+    },
+    {
+      "checklistId": "S406224920",
+      "date": "2026-10-29",
+      "district": "Chikkaballapura",
+      "species": [
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406226020",
+      "date": "2026-10-29",
+      "district": "Chikkaballapura",
+      "species": []
+    },
+    {
+      "checklistId": "S406226781",
+      "date": "2026-10-29",
+      "district": "Tumakuru",
+      "species": [
+        "Booted Eagle",
+        "Brahminy Kite",
+        "Common Tailorbird",
+        "Coppersmith Barbet",
+        "Egyptian Vulture",
+        "Indian Peafowl",
+        "Jungle Babbler",
+        "Oriental Honey-buzzard",
+        "Peregrine Falcon",
+        "Purple-rumped Sunbird",
+        "Rose-ringed Parakeet",
+        "White-browed Bulbul",
+        "White-cheeked Barbet",
+        "Wire-tailed Swallow",
+        "swift sp."
+      ]
+    },
+    {
+      "checklistId": "S406227784",
+      "date": "2026-10-29",
+      "district": "Ballari",
+      "species": [
+        "Greenish Warbler"
+      ]
+    },
+    {
+      "checklistId": "S406228089",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Ashy Drongo",
+        "Ashy Prinia",
+        "Asian Green Bee-eater",
+        "Asian Koel",
+        "Barn Swallow",
+        "Baya Weaver",
+        "Black Drongo",
+        "Black-rumped Flameback",
+        "Blue-tailed Bee-eater",
+        "Common Iora",
+        "Common Myna",
+        "Common Tailorbird",
+        "Coppersmith Barbet",
+        "Gray Francolin",
+        "Gray-headed Swamphen",
+        "Indian Peafowl",
+        "Indian Roller",
+        "Indian Thick-knee",
+        "Jungle Prinia",
+        "Laughing Dove",
+        "Little Cormorant",
+        "Oriental Turtle-Dove",
+        "Pale-billed Flowerpecker",
+        "Pied Bushchat",
+        "Plain Prinia",
+        "Purple Sunbird",
+        "Purple-rumped Sunbird",
+        "Red Avadavat",
+        "Red-vented Bulbul",
+        "Red-wattled Lapwing",
+        "Red-whiskered Bulbul",
+        "Rose-ringed Parakeet",
+        "Spotted Dove",
+        "Tricolored Munia",
+        "White-browed Bulbul",
+        "White-browed Wagtail",
+        "White-throated Kingfisher",
+        "Zitting Cisticola"
+      ]
+    },
+    {
+      "checklistId": "S406229016",
+      "date": "2026-10-29",
+      "district": "Chikkamagaluru",
+      "species": [
+        "Alpine Swift",
+        "Ashy Prinia",
+        "Asian Green Bee-eater",
+        "Asian Openbill",
+        "Barn Swallow",
+        "Black Kite",
+        "Black-winged Stilt",
+        "Brahminy Kite",
+        "Brown Shrike",
+        "Common Myna",
+        "Common Sandpiper",
+        "Eurasian Coot",
+        "Eurasian Spoonbill",
+        "Garganey",
+        "Glossy Ibis",
+        "Gray Heron",
+        "Gray-headed Swamphen",
+        "Great Cormorant",
+        "Indian Pond-Heron",
+        "Indian Spot-billed Duck",
+        "Kentish Plover",
+        "Little Cormorant",
+        "Little Egret",
+        "Little Ringed Plover",
+        "Medium Egret",
+        "Oriental Darter",
+        "Oriental Pratincole",
+        "Painted Stork",
+        "Purple Heron",
+        "Red-vented Bulbul",
+        "Red-wattled Lapwing",
+        "River Tern",
+        "Streak-throated Swallow",
+        "Temminck's Stint",
+        "White-throated Kingfisher",
+        "Wood Sandpiper",
+        "crow sp.",
+        "peep sp.",
+        "swift sp.",
+        "tern sp."
+      ]
+    },
+    {
+      "checklistId": "S406229092",
+      "date": "2026-10-29",
+      "district": "Kodagu",
+      "species": [
+        "Ashy Drongo",
+        "Asian Green Bee-eater",
+        "Brown Wood-Owl",
+        "Crested Serpent-Eagle",
+        "Crested Treeswift",
+        "Crimson-backed Sunbird",
+        "Gray Wagtail",
+        "Gray-breasted Prinia",
+        "Greenish Warbler",
+        "Indian Swiftlet",
+        "Large-billed Leaf Warbler",
+        "Malabar Barbet",
+        "Plum-headed Parakeet",
+        "Puff-throated Babbler",
+        "Purple-rumped Sunbird",
+        "Red-vented Bulbul",
+        "Rufous Treepie",
+        "Small Minivet",
+        "Spotted Dove",
+        "Tickell's Blue Flycatcher",
+        "Velvet-fronted Nuthatch",
+        "Vernal Hanging-Parrot",
+        "White-browed Wagtail",
+        "White-cheeked Barbet",
+        "Yellow-browed Bulbul"
+      ]
+    },
+    {
+      "checklistId": "S406229242",
+      "date": "2026-10-29",
+      "district": "Chitradurga",
+      "species": [
+        "Black Eagle"
+      ]
+    },
+    {
+      "checklistId": "S406229309",
+      "date": "2026-10-29",
+      "district": "Chitradurga",
+      "species": [
+        "Indian Nightjar",
+        "Rock Bush-Quail"
+      ]
+    },
+    {
+      "checklistId": "S406229334",
+      "date": "2026-10-29",
+      "district": "Chitradurga",
+      "species": [
+        "Asian Green Bee-eater",
+        "Blyth's Reed Warbler",
+        "Indian Robin",
+        "Large Gray Babbler",
+        "Pallid Harrier",
+        "Red-vented Bulbul",
+        "Yellow-billed Babbler"
+      ]
+    },
+    {
+      "checklistId": "S406229414",
+      "date": "2026-10-29",
+      "district": "Kodagu",
+      "species": [
+        "Common Tailorbird",
+        "Gray Junglefowl",
+        "Gray-breasted Prinia",
+        "Greenish Warbler",
+        "Indian Peafowl",
+        "Indian Pond-Heron"
+      ]
+    },
+    {
+      "checklistId": "S406229490",
+      "date": "2026-10-29",
+      "district": "Kodagu",
+      "species": [
+        "Gray Junglefowl",
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406229883",
+      "date": "2026-10-29",
+      "district": "Kodagu",
+      "species": [
+        "Common Tailorbird",
+        "Gray Junglefowl",
+        "Gray-breasted Prinia",
+        "Greenish Warbler",
+        "Indian Peafowl",
+        "Indian Pond-Heron"
+      ]
+    },
+    {
+      "checklistId": "S406229932",
+      "date": "2026-10-29",
+      "district": "Kodagu",
+      "species": [
+        "Gray Junglefowl",
+        "Indian Peafowl",
+        "Spotted Dove"
+      ]
+    },
+    {
+      "checklistId": "S406230302",
+      "date": "2026-10-29",
+      "district": "Mandya",
+      "species": [
+        "Blue-bearded Bee-eater",
+        "European Roller",
+        "Purple Heron",
+        "White-throated Kingfisher"
+      ]
+    },
+    {
+      "checklistId": "S406230662",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": []
+    },
+    {
+      "checklistId": "S406230686",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406230688",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406230692",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Brahminy Starling",
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406230695",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Spot-billed Duck"
+      ]
+    },
+    {
+      "checklistId": "S406230703",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406230716",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406230717",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Peafowl",
+        "Spotted Dove",
+        "Yellow-footed Green-Pigeon"
+      ]
+    },
+    {
+      "checklistId": "S406230836",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Rock Pigeon (Feral Pigeon)"
+      ]
+    },
+    {
+      "checklistId": "S406230935",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": []
+    },
+    {
+      "checklistId": "S406231349",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Asian Koel",
+        "Black Drongo",
+        "Black Kite",
+        "Common Myna",
+        "Common Tailorbird",
+        "Eastern Red-rumped Swallow",
+        "Greater Coucal",
+        "Indian White-eye",
+        "Pale-billed Flowerpecker",
+        "Purple Sunbird",
+        "Purple-rumped Sunbird",
+        "Red-vented Bulbul",
+        "Red-whiskered Bulbul",
+        "Rose-ringed Parakeet",
+        "Spotted Dove",
+        "White-cheeked Barbet"
+      ]
+    },
+    {
+      "checklistId": "S406231381",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406231416",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Peafowl",
+        "River Tern"
+      ]
+    },
+    {
+      "checklistId": "S406231501",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406234934",
+      "date": "2026-10-29",
+      "district": "Koppal",
+      "species": [
+        "kingfisher sp."
+      ]
+    },
+    {
+      "checklistId": "S406235357",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "House Crow"
+      ]
+    },
+    {
+      "checklistId": "S406235761",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": []
+    },
+    {
+      "checklistId": "S406236614",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406237386",
+      "date": "2026-10-29",
+      "district": "Chitradurga",
+      "species": [
+        "Common Myna",
+        "Purple-rumped Sunbird",
+        "Yellow-billed Babbler"
+      ]
+    },
+    {
+      "checklistId": "S406237616",
+      "date": "2026-10-29",
+      "district": "Kalaburagi",
+      "species": [
+        "Common Tailorbird"
+      ]
+    },
+    {
+      "checklistId": "S406237764",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": []
+    },
+    {
+      "checklistId": "S406237982",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": []
+    },
+    {
+      "checklistId": "S406238292",
+      "date": "2026-10-29",
+      "district": "Kalaburagi",
+      "species": []
+    },
+    {
+      "checklistId": "S406238464",
+      "date": "2026-10-29",
+      "district": "Uttara Kannada",
+      "species": [
+        "Asian Green Bee-eater",
+        "Coppersmith Barbet",
+        "Crested Serpent-Eagle",
+        "Crimson-backed Sunbird",
+        "Dark-fronted Babbler",
+        "Greater Racket-tailed Drongo",
+        "Indian Peafowl",
+        "Indian Roller",
+        "Large-billed Leaf Warbler",
+        "Malabar Gray Hornbill",
+        "Plum-headed Parakeet",
+        "Red-whiskered Bulbul",
+        "Western Yellow Wagtail",
+        "White-cheeked Barbet"
+      ]
+    },
+    {
+      "checklistId": "S406239035",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Green Imperial-Pigeon"
+      ]
+    },
+    {
+      "checklistId": "S406239274",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406239358",
+      "date": "2026-10-29",
+      "district": "Chitradurga",
+      "species": [
+        "Asian Tit",
+        "Purple-rumped Sunbird",
+        "White-browed Wagtail"
+      ]
+    },
+    {
+      "checklistId": "S406241068",
+      "date": "2026-10-29",
+      "district": "Bengaluru Rural",
+      "species": [
+        "Alexandrine Parakeet",
+        "Ashy Prinia",
+        "Asian Green Bee-eater",
+        "Barn Swallow",
+        "Black Drongo",
+        "Black Kite",
+        "Black-winged Kite",
+        "Blue-tailed Bee-eater",
+        "Brahminy Kite",
+        "Bronze-winged Jacana",
+        "Brown Shrike",
+        "Common Hoopoe",
+        "Common Myna",
+        "Dusky Crag-Martin",
+        "Eastern Cattle-Egret",
+        "Eastern Red-rumped Swallow",
+        "Eurasian Coot",
+        "European Roller",
+        "Great Cormorant",
+        "Greater Spotted Eagle",
+        "House Crow",
+        "Indian Peafowl",
+        "Indian Pond-Heron",
+        "Indian Roller",
+        "Indian Silverbill",
+        "Indian Spotted Eagle",
+        "Jerdon's Bushlark",
+        "Jungle Myna",
+        "Large-billed Crow",
+        "Laughing Dove",
+        "Lesser Kestrel",
+        "Little Cormorant",
+        "Montagu's Harrier",
+        "Oriental Darter",
+        "Paddyfield Pipit",
+        "Painted Stork",
+        "Pallid Harrier",
+        "Peregrine Falcon",
+        "Pied Bushchat",
+        "Plain Prinia",
+        "Red-wattled Lapwing",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Rose-ringed Parakeet",
+        "Rosy Starling",
+        "Siberian Stonechat",
+        "Spotted Dove",
+        "Western Marsh Harrier",
+        "White-throated Kingfisher",
+        "Zitting Cisticola"
+      ]
+    },
+    {
+      "checklistId": "S406242182",
+      "date": "2026-10-29",
+      "district": "Chikkaballapura",
+      "species": [
+        "Gray Junglefowl"
+      ]
+    },
+    {
+      "checklistId": "S406245007",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Indian Pond-Heron",
+        "Little Cormorant",
+        "Little Egret"
+      ]
+    },
+    {
+      "checklistId": "S406245298",
+      "date": "2026-10-29",
+      "district": "Chikkaballapura",
+      "species": [
+        "Asian Green Bee-eater",
+        "Blyth's Reed Warbler",
+        "Green Warbler",
+        "Greenish Warbler",
+        "Indian White-eye",
+        "Indian Yellow Tit",
+        "Malabar Gray Hornbill",
+        "Purple-rumped Sunbird",
+        "Red-whiskered Bulbul",
+        "Rock Pigeon (Feral Pigeon)",
+        "Spotted Dove",
+        "Vernal Hanging-Parrot",
+        "Yellow-browed Bulbul"
+      ]
+    },
+    {
+      "checklistId": "S406246164",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Black Drongo",
+        "Pied Bushchat"
+      ]
+    },
+    {
+      "checklistId": "S406246309",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406246496",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406247449",
+      "date": "2026-10-29",
+      "district": "Uttara Kannada",
+      "species": [
+        "Asian Green Bee-eater",
+        "Black Kite",
+        "Brahminy Kite",
+        "Common Kingfisher",
+        "Common Sandpiper",
+        "Gray Heron",
+        "Green Warbler",
+        "House Crow",
+        "Little Egret",
+        "White-throated Kingfisher"
+      ]
+    },
+    {
+      "checklistId": "S406247795",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Indian Peafowl"
+      ]
+    },
+    {
+      "checklistId": "S406249307",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Alexandrine Parakeet",
+        "Ashy Prinia",
+        "Black Kite",
+        "Common Myna",
+        "Large-billed Crow",
+        "Pale-billed Flowerpecker",
+        "Purple Sunbird",
+        "Red-vented Bulbul",
+        "Rock Pigeon (Feral Pigeon)"
+      ]
+    },
+    {
+      "checklistId": "S406257347",
+      "date": "2026-10-29",
+      "district": "Kodagu",
+      "species": [
+        "Spotted Dove"
+      ]
+    },
+    {
+      "checklistId": "S406257654",
+      "date": "2026-10-29",
+      "district": "Chikkaballapura",
+      "species": [
+        "Blue-tailed Bee-eater"
+      ]
+    },
+    {
+      "checklistId": "S406257823",
+      "date": "2026-10-29",
+      "district": "Kodagu",
+      "species": [
+        "Greater Coucal"
+      ]
+    },
+    {
+      "checklistId": "S406258512",
+      "date": "2026-10-29",
+      "district": "Chikkaballapura",
+      "species": [
+        "Vernal Hanging-Parrot"
+      ]
+    },
+    {
+      "checklistId": "S406259754",
+      "date": "2026-10-29",
+      "district": "Chikkaballapura",
+      "species": [
+        "Asian Green Bee-eater"
+      ]
+    },
+    {
+      "checklistId": "S406261551",
+      "date": "2026-10-29",
+      "district": "Bengaluru Urban",
+      "species": [
+        "Common Myna",
+        "Common Tailorbird",
+        "Oriental Magpie-Robin (Oriental)",
+        "Red-whiskered Bulbul"
+      ]
+    },
+    {
+      "checklistId": "S406264322",
+      "date": "2026-10-29",
+      "district": "Chikkaballapura",
+      "species": [
+        "Asian Fairy-bluebird",
+        "Bar-winged Flycatcher-shrike",
+        "Black Drongo",
+        "Blyth's Reed Warbler",
+        "Common Tailorbird",
+        "Gray Wagtail",
+        "Greater Coucal",
+        "Greater Racket-tailed Drongo",
+        "Green Warbler",
+        "Greenish Warbler",
+        "Large-billed Leaf Warbler",
+        "Malabar Starling",
+        "Orange Minivet",
+        "Purple-rumped Sunbird",
+        "Red-vented Bulbul",
+        "Red-whiskered Bulbul",
+        "Small Minivet",
+        "Verditer Flycatcher",
+        "Vernal Hanging-Parrot",
+        "Western Yellow Wagtail",
+        "White-browed Wagtail",
+        "White-cheeked Barbet",
+        "Yellow-browed Bulbul"
+      ]
+    },
+    {
+      "checklistId": "S406266720",
+      "date": "2026-10-29",
+      "district": "Mysuru",
+      "species": [
+        "Ashy Prinia",
+        "Blyth's Reed Warbler",
+        "Common Iora",
+        "Common Tailorbird",
+        "Indian Gray Hornbill",
+        "Purple-rumped Sunbird",
+        "Red-whiskered Bulbul",
+        "Rose-ringed Parakeet",
+        "Spotted Dove",
+        "White-browed Bulbul"
+      ]
+    },
+    {
+      "checklistId": "S406267259",
+      "date": "2026-10-29",
+      "district": "Kodagu",
+      "species": [
+        "Indian Pond-Heron"
+      ]
+    }
+  ],
+  "limitedFeeds": []
+}
