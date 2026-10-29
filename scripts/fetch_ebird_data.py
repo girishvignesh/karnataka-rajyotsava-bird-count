@@ -2,8 +2,10 @@ import json
 import os
 import time
 from collections import defaultdict
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
+from email.utils import parsedate_to_datetime
 from pathlib import Path
+from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
@@ -14,7 +16,11 @@ OUT = ROOT / "data"
 API_BASE = "https://api.ebird.org/v2"
 EVENT_START = date(2026, 10, 29)
 EVENT_END = date(2026, 11, 2)
-REQUEST_DELAY_SECONDS = 1
+REQUEST_DELAY_SECONDS = 3
+MAX_REQUEST_ATTEMPTS = 5
+RETRY_BASE_SECONDS = 60
+CHECKLIST_FEED_LIMIT = 200
+IST = timezone(timedelta(hours=5, minutes=30))
 
 
 def api_get(path: str, params: dict | None = None):
@@ -34,13 +40,51 @@ def api_get(path: str, params: dict | None = None):
         },
     )
 
-    with urlopen(request, timeout=30) as response:
-        return json.loads(response.read().decode("utf-8"))
+    for attempt in range(MAX_REQUEST_ATTEMPTS):
+        time.sleep(REQUEST_DELAY_SECONDS)
+        try:
+            with urlopen(request, timeout=30) as response:
+                return json.loads(response.read().decode("utf-8"))
+        except HTTPError as error:
+            if error.code != 429 and not 500 <= error.code < 600:
+                raise
+            if attempt == MAX_REQUEST_ATTEMPTS - 1:
+                raise
+            delay = RETRY_BASE_SECONDS * 2**attempt
+            retry_after = error.headers.get("Retry-After")
+            if retry_after:
+                try:
+                    retry_seconds = float(retry_after)
+                except ValueError:
+                    retry_seconds = (
+                        parsedate_to_datetime(retry_after)
+                        - datetime.now(timezone.utc)
+                    ).total_seconds()
+                delay = max(delay, retry_seconds)
+            print(
+                f"eBird HTTP {error.code} for {path}; "
+                f"retrying in {delay:g}s "
+                f"(attempt {attempt + 2}/{MAX_REQUEST_ATTEMPTS}).",
+                flush=True,
+            )
+        except (URLError, TimeoutError) as error:
+            if attempt == MAX_REQUEST_ATTEMPTS - 1:
+                raise
+            delay = RETRY_BASE_SECONDS * 2**attempt
+            print(
+                f"eBird request failed for {path}: {error}; "
+                f"retrying in {delay:g}s "
+                f"(attempt {attempt + 2}/{MAX_REQUEST_ATTEMPTS}).",
+                flush=True,
+            )
+        time.sleep(delay)
 
 
-def event_dates():
+def event_dates(today: date | None = None):
+    if today is None:
+        today = datetime.now(IST).date()
     current = EVENT_START
-    while current <= EVENT_END:
+    while current <= min(EVENT_END, today):
         yield current
         current += timedelta(days=1)
 
@@ -80,24 +124,24 @@ def fetch_district_checklists(
             f"{event_day.year}/{event_day.month}/{event_day.day}"
         )
 
-        try:
-            checklist_feed = api_get(path)
-        except Exception as error:
-            print(f"Failed checklist feed for {district_name} on {event_day}: {error}")
-            continue
+        checklist_feed = api_get(path, {"maxResults": CHECKLIST_FEED_LIMIT})
+        if len(checklist_feed) >= CHECKLIST_FEED_LIMIT:
+            raise RuntimeError(
+                f"Checklist feed reached the {CHECKLIST_FEED_LIMIT}-result limit "
+                f"for {district_name} on {event_day}; refusing to publish "
+                "potentially incomplete totals."
+            )
+        print(
+            f"{district_name} on {event_day}: {len(checklist_feed)} checklists.",
+            flush=True,
+        )
 
         for entry in checklist_feed:
-            checklist_id = entry.get("subId")
-            if not checklist_id:
-                continue
+            checklist_id = entry["subId"]
 
-            try:
-                checklist_details = api_get(
-                    f"/product/checklist/view/{checklist_id}"
-                )
-            except Exception as error:
-                print(f"Failed checklist details for {checklist_id}: {error}")
-                continue
+            checklist_details = api_get(
+                f"/product/checklist/view/{checklist_id}"
+            )
 
             observations = checklist_details.get("obs", [])
             species = species_names(observations, taxonomy_names)
@@ -112,10 +156,6 @@ def fetch_district_checklists(
                     "url": f"https://ebird.org/checklist/{checklist_id}",
                 }
             )
-
-            time.sleep(REQUEST_DELAY_SECONDS)
-
-        time.sleep(REQUEST_DELAY_SECONDS)
 
     return checklists
 
@@ -168,7 +208,7 @@ def build_summaries(checklists):
         "species": len(all_species),
         "districtsCovered": len(district_checklists),
         "speciesList": sorted(all_species),
-        "lastUpdated": datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
+        "lastUpdated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
     }
 
     OUT.mkdir(exist_ok=True)

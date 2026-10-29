@@ -34,7 +34,7 @@ jobs:
       - name: Fetch eBird data and build summaries
         env:
           EBIRD_API_KEY: ${{ secrets.EBIRD_API_KEY }}
-        run: python scripts/fetch_ebird_data.py
+        run: python -u scripts/fetch_ebird_data.py
 
       - name: Commit refreshed data
         run: |
