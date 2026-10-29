@@ -624,7 +624,7 @@
   },
   {
     "district": "Kodagu",
-    "checklists": 8,
+    "checklists": 9,
     "species": 30,
     "speciesList": [
       "Ashy Drongo",
@@ -691,8 +691,8 @@
   },
   {
     "district": "Mysuru",
-    "checklists": 53,
-    "species": 70,
+    "checklists": 54,
+    "species": 73,
     "speciesList": [
       "Ashy Prinia",
       "Asian Brown Flycatcher",
@@ -705,9 +705,11 @@
       "Black Kite",
       "Black-headed Ibis",
       "Blue-tailed Bee-eater",
+      "Blyth's Reed Warbler",
       "Brahminy Kite",
       "Brahminy Starling",
       "Common Hoopoe",
+      "Common Iora",
       "Common Kingfisher",
       "Common Myna",
       "Common Sandpiper",
@@ -760,6 +762,7 @@
       "Tricolored Munia",
       "Western Yellow Wagtail",
       "White-breasted Waterhen",
+      "White-browed Bulbul",
       "White-browed Wagtail",
       "White-cheeked Barbet",
       "White-throated Kingfisher",

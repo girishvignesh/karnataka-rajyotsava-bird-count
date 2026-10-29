@@ -3,7 +3,7 @@
   "event": "Karnataka Rajyotsava Bird Count",
   "startDate": "2026-10-29",
   "endDate": "2026-11-02",
-  "checklists": 195,
+  "checklists": 197,
   "species": 255,
   "districtsCovered": 18,
   "speciesList": [
@@ -263,6 +263,6 @@
     "tern sp.",
     "white egret sp."
   ],
-  "lastUpdated": "2026-10-29 11:49 UTC",
+  "lastUpdated": "2026-10-29 12:11 UTC",
   "coverageWarning": ""
 }
