@@ -1,11 +1,11 @@
 {
   "state": "Karnataka",
   "event": "Karnataka Rajyotsava Bird Count",
-  "startDate": "2026-10-30",
+  "startDate": "2026-10-29",
   "endDate": "2026-11-02",
-  "checklists": 0,
+  "checklists": 98,
   "species": 0,
-  "districtsCovered": 0,
+  "districtsCovered": 18,
   "speciesList": [],
-  "lastUpdated": "2026-10-29 10:05 UTC"
+  "lastUpdated": "2026-10-29 10:17 UTC"
 }
