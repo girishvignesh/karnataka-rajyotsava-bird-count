@@ -40,3 +40,5 @@ This portal displays aggregated checklist and species totals only.
 It does not publish participant contact information or raw eBird data.
 
 Data source: eBird, Cornell Lab of Ornithology.
+Species names are resolved from eBird taxonomy using the species codes in
+checklist observations.

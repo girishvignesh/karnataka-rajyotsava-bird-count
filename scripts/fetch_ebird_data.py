@@ -45,7 +45,33 @@ def event_dates():
         current += timedelta(days=1)
 
 
-def fetch_district_checklists(district_code: str, district_name: str):
+def fetch_taxonomy_names():
+    taxonomy = api_get("/ref/taxonomy/ebird", {"fmt": "json", "locale": "en"})
+    if not isinstance(taxonomy, list):
+        raise ValueError("Unexpected eBird taxonomy response.")
+
+    return {
+        taxon["speciesCode"]: taxon["comName"]
+        for taxon in taxonomy
+        if taxon.get("speciesCode") and taxon.get("comName")
+    }
+
+
+def species_names(observations, taxonomy_names):
+    return sorted(
+        {
+            observation.get("comName")
+            or taxonomy_names.get(observation.get("speciesCode"))
+            or observation.get("speciesCode")
+            for observation in observations
+            if observation.get("comName") or observation.get("speciesCode")
+        }
+    )
+
+
+def fetch_district_checklists(
+    district_code: str, district_name: str, taxonomy_names: dict
+):
     checklists = []
 
     for event_day in event_dates():
@@ -74,13 +100,7 @@ def fetch_district_checklists(district_code: str, district_name: str):
                 continue
 
             observations = checklist_details.get("obs", [])
-            species = sorted(
-                {
-                    observation["comName"]
-                    for observation in observations
-                    if observation.get("comName")
-                }
-            )
+            species = species_names(observations, taxonomy_names)
 
             checklists.append(
                 {
@@ -171,12 +191,15 @@ def build_summaries(checklists):
 
 def main():
     config = json.loads(CONFIG.read_text(encoding="utf-8"))
+    taxonomy_names = fetch_taxonomy_names()
     all_checklists = []
 
     for district in config["districts"]:
         print(f"Fetching {district['name']}…")
         all_checklists.extend(
-            fetch_district_checklists(district["code"], district["name"])
+            fetch_district_checklists(
+                district["code"], district["name"], taxonomy_names
+            )
         )
 
     build_summaries(all_checklists)
