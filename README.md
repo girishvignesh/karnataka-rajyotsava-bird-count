@@ -1,4 +1,4 @@
-# Karnataka Rajyotsava Bird Count Dashboard
+# Karnataka Rajyotsava Bird Count 2026 Dashboard
 
 Public dashboard for the Karnataka Rajyotsava Bird Count,
 October 29–November 2, 2026.
