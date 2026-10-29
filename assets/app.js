@@ -1,109 +1,7 @@
-const KARNATAKA_GEOJSON_URL =
-  "https://raw.githubusercontent.com/datameet/maps/master/Districts/karnataka.geojson";
-
 let districtSummary = [];
 let karnatakaSummary = {};
 let dailySummary = [];
-let map;
-let geojsonLayer;
 let dailyChart;
-
-const districtNameMap = {
-  "bangalore urban": "Bengaluru Urban",
-  "bengaluru urban": "Bengaluru Urban",
-  "bangalore rural": "Bengaluru Rural",
-  "bengaluru rural": "Bengaluru Rural",
-  "belgaum": "Belagavi",
-  "bellary": "Ballari",
-  "bijapur": "Vijayapura",
-  "mysore": "Mysuru",
-  "tumkur": "Tumakuru",
-  "shimoga": "Shivamogga",
-  "chikmagalur": "Chikkamagaluru",
-  "coorg": "Kodagu"
-};
-
-function normalizeName(name) {
-  const key = String(name || "").trim().toLowerCase();
-  return districtNameMap[key] || String(name || "").trim();
-}
-
-function getColor(checklists, max) {
-  if (!checklists) return "#f1f5f9";
-
-  const ratio = max ? checklists / max : 0;
-
-  if (ratio > 0.75) return "#14532d";
-  if (ratio > 0.5) return "#166534";
-  if (ratio > 0.25) return "#22c55e";
-  return "#86efac";
-}
-
-function initMap() {
-  map = L.map("map").setView([15.3, 75.7], 7);
-
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution: "&copy; OpenStreetMap contributors"
-  }).addTo(map);
-}
-
-function renderMap() {
-  const max = Math.max(...districtSummary.map(d => d.checklists), 1);
-
-  const lookup = new Map(
-    districtSummary.map(d => [normalizeName(d.district).toLowerCase(), d])
-  );
-
-  if (geojsonLayer) {
-    map.removeLayer(geojsonLayer);
-  }
-
-  fetch(KARNATAKA_GEOJSON_URL)
-    .then(response => response.json())
-    .then(geojson => {
-      geojsonLayer = L.geoJSON(geojson, {
-        style: feature => {
-          const name = normalizeName(
-            feature.properties.DISTRICT ||
-            feature.properties.district ||
-            feature.properties.NAME_2 ||
-            feature.properties.name
-          );
-
-          const data = lookup.get(name.toLowerCase());
-          const count = data ? data.checklists : 0;
-
-          return {
-            fillColor: getColor(count, max),
-            fillOpacity: 0.8,
-            color: "#ffffff",
-            weight: 1
-          };
-        },
-        onEachFeature: (feature, layer) => {
-          const name = normalizeName(
-            feature.properties.DISTRICT ||
-            feature.properties.district ||
-            feature.properties.NAME_2 ||
-            feature.properties.name
-          );
-
-          const data = lookup.get(name.toLowerCase());
-
-          layer.bindPopup(
-            `<strong>${name}</strong><br>
-             Checklists: ${data ? data.checklists : 0}<br>
-             Species: ${data ? data.species : 0}`
-          );
-
-          layer.on("click", () => {
-            document.getElementById("districtSearch").value = name;
-            renderDistrictTable(name);
-          });
-        }
-      }).addTo(map);
-    });
-}
 
 function renderStats() {
   document.getElementById("totalChecklists").textContent =
@@ -229,9 +127,7 @@ async function init() {
       loadJSON("data/daily_summary.json")
     ]);
 
-    initMap();
     renderStats();
-    renderMap();
     renderDailyChart();
     renderDistrictTable();
     renderSpeciesTable();

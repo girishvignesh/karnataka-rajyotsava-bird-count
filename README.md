@@ -10,7 +10,6 @@ October 29–November 2, 2026.
 - Districts covered
 - District-wise checklist and species totals
 - Daily progress chart
-- Karnataka district map
 - Searchable species list
 
 ## Automatic updates
