@@ -19,7 +19,7 @@ EVENT_END = date(2026, 11, 2)
 REQUEST_DELAY_SECONDS = 3
 MAX_REQUEST_ATTEMPTS = 5
 RETRY_BASE_SECONDS = 60
-CHECKLIST_FEED_LIMIT = 1000
+CHECKLIST_FEED_LIMIT = 200
 IST = timezone(timedelta(hours=5, minutes=30))
 
 
@@ -113,9 +113,48 @@ def species_names(observations, taxonomy_names):
     )
 
 
+def checklist_date(value, field, checklist_id):
+    if not isinstance(value, str) or not value:
+        raise ValueError(f"Missing {field} for checklist {checklist_id}.")
+    try:
+        timestamp = datetime.fromisoformat(value)
+    except ValueError as error:
+        raise ValueError(
+            f"Invalid {field} for checklist {checklist_id}: {value!r}"
+        ) from error
+    if timestamp.tzinfo is not None:
+        timestamp = timestamp.astimezone(IST)
+    return timestamp.date()
+
+
+def checklist_record(checklist_id, district_name, details, taxonomy_names):
+    observation_day = checklist_date(details.get("obsDt"), "obsDt", checklist_id)
+    submission_day = checklist_date(
+        details.get("creationDt"), "creationDt", checklist_id
+    )
+    if not (
+        EVENT_START <= observation_day <= EVENT_END
+        and EVENT_START <= submission_day <= EVENT_END
+    ):
+        print(
+            f"Excluding {checklist_id}: observation {observation_day}, "
+            f"submission {submission_day}; both must be within "
+            f"{EVENT_START} through {EVENT_END}.",
+            flush=True,
+        )
+        return None
+    return {
+        "checklistId": checklist_id,
+        "date": observation_day.isoformat(),
+        "submittedDate": submission_day.isoformat(),
+        "district": district_name,
+        "species": species_names(details.get("obs", []), taxonomy_names),
+    }
+
+
 def fetch_district_checklists(
     district_code: str, district_name: str, taxonomy_names: dict,
-    limited_feeds: set,
+    limited_feeds: set, excluded_ids: set | None = None,
 ):
     checklists = []
 
@@ -146,17 +185,13 @@ def fetch_district_checklists(
                 f"/product/checklist/view/{checklist_id}"
             )
 
-            observations = checklist_details.get("obs", [])
-            species = species_names(observations, taxonomy_names)
-
-            checklists.append(
-                {
-                    "checklistId": checklist_id,
-                    "date": event_day.isoformat(),
-                    "district": district_name,
-                    "species": species,
-                }
+            record = checklist_record(
+                checklist_id, district_name, checklist_details, taxonomy_names
             )
+            if record is not None:
+                checklists.append(record)
+            elif excluded_ids is not None:
+                excluded_ids.add(checklist_id)
 
     return checklists
 
@@ -168,8 +203,9 @@ def load_archive():
         return {}, set()
 
     archive = json.loads(path.read_text(encoding="utf-8"))
+    archive_start = date.fromisoformat(archive["startDate"])
     if (
-        archive["startDate"] != EVENT_START.isoformat()
+        archive_start not in (EVENT_START, date(2026, 10, 29))
         or archive["endDate"] != EVENT_END.isoformat()
     ):
         raise ValueError("Checklist archive belongs to a different event date range.")
@@ -183,22 +219,38 @@ def load_archive():
             or checklist_id in checklists
             or not isinstance(checklist["district"], str)
             or not checklist["district"]
-            or not EVENT_START <= date.fromisoformat(checklist["date"]) <= EVENT_END
+            or not archive_start <= date.fromisoformat(checklist["date"]) <= EVENT_END
             or not isinstance(checklist["species"], list)
             or not all(isinstance(name, str) and name for name in checklist["species"])
         ):
             raise ValueError(f"Invalid or duplicate archived checklist: {checklist_id}")
         checklists[checklist_id] = checklist
 
+    for checklist_id, checklist in list(checklists.items()):
+        submission_day = (
+            date.fromisoformat(checklist["submittedDate"])
+            if "submittedDate" in checklist else None
+        )
+        if (
+            date.fromisoformat(checklist["date"]) < EVENT_START
+            or (
+                submission_day is not None
+                and not EVENT_START <= submission_day <= EVENT_END
+            )
+        ):
+            print(f"Removing out-of-window archived checklist {checklist_id}.")
+            del checklists[checklist_id]
+
     limited_feeds = set()
     for feed in archive["limitedFeeds"]:
         if (
             not isinstance(feed["district"], str)
             or not feed["district"]
-            or not EVENT_START <= date.fromisoformat(feed["date"]) <= EVENT_END
+            or not archive_start <= date.fromisoformat(feed["date"]) <= EVENT_END
         ):
             raise ValueError(f"Invalid archived limited feed: {feed}")
-        limited_feeds.add((feed["district"], feed["date"]))
+        if date.fromisoformat(feed["date"]) >= EVENT_START:
+            limited_feeds.add((feed["district"], feed["date"]))
     return checklists, limited_feeds
 
 
@@ -304,21 +356,38 @@ def build_summaries(checklists, limited_feeds=()):
 def main():
     config = json.loads(CONFIG.read_text(encoding="utf-8"))
     all_checklists, limited_feeds = load_archive()
-    previous_count = len(all_checklists)
+    previous_ids = set(all_checklists)
     taxonomy_names = fetch_taxonomy_names()
 
+    for checklist_id, checklist in list(all_checklists.items()):
+        if "submittedDate" not in checklist:
+            print(f"Revalidating dates for archived checklist {checklist_id}.")
+            details = api_get(f"/product/checklist/view/{checklist_id}")
+            record = checklist_record(
+                checklist_id, checklist["district"], details, taxonomy_names
+            )
+            if record is None:
+                del all_checklists[checklist_id]
+            else:
+                all_checklists[checklist_id] = record
+
+    excluded_ids = set()
     for district in config["districts"]:
         print(f"Fetching {district['name']}…")
         for checklist in fetch_district_checklists(
-            district["code"], district["name"], taxonomy_names, limited_feeds
+            district["code"], district["name"], taxonomy_names, limited_feeds,
+            excluded_ids,
         ):
             all_checklists[checklist["checklistId"]] = checklist
+
+    for checklist_id in excluded_ids:
+        all_checklists.pop(checklist_id, None)
 
     save_archive(all_checklists, limited_feeds)
     build_summaries(list(all_checklists.values()), limited_feeds)
     print(
         f"Dashboard updated with {len(all_checklists)} accumulated checklists "
-        f"({len(all_checklists) - previous_count} new)."
+        f"({len(all_checklists.keys() - previous_ids)} new)."
     )
 
 

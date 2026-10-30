@@ -1,7 +1,7 @@
 # Karnataka Rajyotsava Bird Count 2026 Dashboard
 
 Public dashboard for the Karnataka Rajyotsava Bird Count,
-October 29–November 2, 2026.
+October 30–November 2, 2026 (inclusive).
 
 ## Features
 
@@ -21,9 +21,18 @@ GitHub Actions refreshes data from the eBird API every 12 hours:
 
 It then rebuilds the dashboard and publishes it using GitHub Pages.
 
-Every refresh queries all elapsed event dates, starting October 29, rather than
-only the hours since the previous refresh. Dates are observation dates, not
-submission dates. Future dates are skipped using India Standard Time.
+Every refresh queries all elapsed event dates, starting October 30, rather than
+only the hours since the previous refresh. Future query dates are skipped using
+India Standard Time.
+
+Checklists qualify only when **both** their actual observation date (`obsDt`)
+and original submission date (`creationDt`) are October 30–November 2, 2026,
+inclusive. The requested feed date is never used as a substitute for either
+date. Edits (`lastEditedDt`) do not change submission eligibility. Missing or
+malformed dates fail the refresh rather than publish unverified totals.
+Offset-bearing timestamps are converted to IST; timestamps without an offset
+use the calendar date returned by eBird (the API examples omit timezone offsets).
+The daily chart groups eligible checklists by observation date.
 
 API requests are paced and transient errors (including HTTP 429 rate limits) are
 retried with exponential backoff and respect for `Retry-After`. If a request
@@ -40,15 +49,20 @@ previously missed checklists have been recovered.
 
 Each successful refresh saves `data/checklists.json`, keyed logically by eBird
 checklist ID. New IDs are added, existing IDs are updated from freshly fetched
-details, and previously saved checklists absent from the latest feed are kept.
+details, and previously saved eligible checklists absent from the latest feed
+are kept. A fetched checklist that no longer qualifies is removed.
 State, district and daily summaries are rebuilt from the entire archive, so a
 new day does not reset earlier days. All elapsed event dates are fetched again
-to discover late submissions.
+to discover submissions made during the event. Uploads after November 2 are
+excluded even if birdwatching occurred during the event.
 
 The existing workflow commits the archive together with the summaries, allowing
 the next GitHub Actions run to resume collection. Keep this file when deploying
-or updating the code. A malformed archive or an archive for a different event
-date range causes the refresh to fail rather than discard saved data.
+or updating the code. Legacy archives starting October 29 are migrated by
+removing October 29 records. Records without a saved submission date are
+re-fetched and validated before being counted. A malformed archive or an
+archive for any other event date range causes the refresh to fail rather than
+discard saved data.
 
 Two non-overlapping 200-result feeds can accumulate 400 unique checklists for
 one district/day. Overlapping feeds add fewer new IDs; collection is not
@@ -74,9 +88,9 @@ aggregate summaries cannot be converted back into individual checklist records.
 ## Data note
 
 The dashboard displays aggregated checklist and species totals. The public
-archive contains only checklist IDs, observation dates, district names and
-species names; it does not store observer names, contacts, coordinates or raw
-API responses.
+archive contains only checklist IDs, observation and submission dates, district
+names and species names; it does not store observer names, contacts, coordinates
+or raw API responses.
 
 Data source: eBird, Cornell Lab of Ornithology.
 Species names are resolved from eBird taxonomy using the species codes in
