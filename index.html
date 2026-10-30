@@ -46,8 +46,12 @@
           <thead>
             <tr>
               <th>District</th>
-              <th>Checklists</th>
-              <th>Species</th>
+              <th scope="col" aria-sort="descending">
+                <button type="button" class="table-sort" data-sort="checklists">Checklists</button>
+              </th>
+              <th scope="col" aria-sort="none">
+                <button type="button" class="table-sort" data-sort="species">Species</button>
+              </th>
             </tr>
           </thead>
           <tbody></tbody>

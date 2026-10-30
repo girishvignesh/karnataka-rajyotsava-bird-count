@@ -9,6 +9,8 @@ October 30–November 2, 2026 (inclusive).
 - Total unique species recorded
 - Districts covered
 - District-wise checklist and species totals
+- Sort districts by checklist or species count using the column headers;
+  click again to reverse the order. Sorting preserves the district search.
 - Daily progress chart
 - Searchable species list
 
@@ -108,3 +110,4 @@ checklist observations.
 ## Tests
 
 Run `python -m unittest discover -s tests -v` from the project root.
+Run `node --test tests\app.test.js` for district table sorting tests.

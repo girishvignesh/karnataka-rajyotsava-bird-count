@@ -132,6 +132,37 @@ tbody tr:hover {
   background: #f1f5f9;
 }
 
+.table-sort {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+}
+
+.table-sort::after {
+  content: " \2195";
+}
+
+th[aria-sort="ascending"] .table-sort::after {
+  content: " \2191";
+}
+
+th[aria-sort="descending"] .table-sort::after {
+  content: " \2193";
+}
+
+.table-sort:hover {
+  text-decoration: underline;
+}
+
+.table-sort:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 4px;
+}
+
 footer {
   text-align: center;
   color: var(--muted);

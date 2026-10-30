@@ -2,6 +2,8 @@ let districtSummary = [];
 let karnatakaSummary = {};
 let dailySummary = [];
 let dailyChart;
+let districtSortKey = "checklists";
+let districtSortDirection = "descending";
 
 function renderStats() {
   document.getElementById("totalChecklists").textContent =
@@ -62,7 +64,11 @@ function renderDistrictTable(filter = "") {
 
   const rows = districtSummary
     .filter(d => d.district.toLowerCase().includes(query))
-    .sort((a, b) => b.checklists - a.checklists)
+    .sort((a, b) => {
+      const difference = a[districtSortKey] - b[districtSortKey];
+      return (districtSortDirection === "ascending" ? difference : -difference)
+        || a.district.localeCompare(b.district);
+    })
     .map(
       d => `
         <tr>
@@ -75,6 +81,13 @@ function renderDistrictTable(filter = "") {
   tbody.innerHTML = rows.length
     ? rows.join("")
     : `<tr><td colspan="3">No matching district.</td></tr>`;
+
+  document.querySelectorAll("#districtTable button[data-sort]").forEach(button => {
+    const active = button.dataset.sort === districtSortKey;
+    button.parentElement.setAttribute(
+      "aria-sort", active ? districtSortDirection : "none"
+    );
+  });
 }
 
 function renderSpeciesTable(filter = "") {
@@ -131,6 +144,16 @@ async function init() {
     renderDailyChart();
     renderDistrictTable();
     renderSpeciesTable();
+
+    document.querySelectorAll("#districtTable button[data-sort]").forEach(button => {
+      button.addEventListener("click", () => {
+        const key = button.dataset.sort;
+        districtSortDirection = key === districtSortKey
+          && districtSortDirection === "descending" ? "ascending" : "descending";
+        districtSortKey = key;
+        renderDistrictTable(document.getElementById("districtSearch").value);
+      });
+    });
 
     document.getElementById("districtSearch").addEventListener("input", e => {
       renderDistrictTable(e.target.value);
