@@ -178,6 +178,46 @@ class EventDatesTests(unittest.TestCase):
         clock.now.assert_called_once_with(fetch_ebird_data.IST)
 
 
+class DeploymentWindowTests(unittest.TestCase):
+    def test_deploy_refresh_requests_only_elapsed_karnataka_event_dates(self):
+        config = json.loads(fetch_ebird_data.CONFIG.read_text(encoding="utf-8"))
+        for today, expected_days in (
+            (date(2026, 10, 29), []),
+            (date(2026, 10, 30), ["2026/10/30"]),
+            (date(2026, 11, 3), ["2026/10/30", "2026/10/31", "2026/11/1", "2026/11/2"]),
+        ):
+            with self.subTest(today=today), tempfile.TemporaryDirectory() as output_dir:
+                with (
+                    patch.object(fetch_ebird_data, "OUT", Path(output_dir)),
+                    patch.object(fetch_ebird_data, "api_get", return_value=[]) as api_get,
+                    patch.object(fetch_ebird_data, "datetime", wraps=datetime) as clock,
+                    patch("builtins.print"),
+                ):
+                    clock.now.return_value = datetime(
+                        today.year, today.month, today.day, tzinfo=fetch_ebird_data.IST
+                    )
+                    fetch_ebird_data.main()
+
+                feed_paths = [
+                    call.args[0] for call in api_get.call_args_list
+                    if call.args[0].startswith("/product/lists/")
+                ]
+                self.assertEqual(
+                    feed_paths,
+                    [
+                        f"/product/lists/{district['code']}/{day}"
+                        for district in config["districts"] for day in expected_days
+                    ],
+                )
+                self.assertTrue(all("/IN-KA-" in path for path in feed_paths))
+                summary = json.loads(
+                    (Path(output_dir) / "karnataka_summary.json").read_text(encoding="utf-8")
+                )
+                self.assertEqual(summary["checklists"], 0)
+                self.assertEqual(summary["startDate"], "2026-10-30")
+                self.assertEqual(summary["endDate"], "2026-11-02")
+
+
 class ChecklistDateTests(unittest.TestCase):
     def setUp(self):
         self.enterContext(patch("builtins.print"))
@@ -197,6 +237,8 @@ class ChecklistDateTests(unittest.TestCase):
                             "obsDt": f"{observed} 00:00",
                             "creationDt": f"{submitted} 23:59:59",
                             "lastEditedDt": "2026-12-01",
+                            "subnational1Code": "IN-KA",
+                            "durationHrs": 0.25,
                         },
                         {},
                     )
@@ -228,6 +270,62 @@ class ChecklistDateTests(unittest.TestCase):
         )
 
 
+class ChecklistScopeTests(unittest.TestCase):
+    def setUp(self):
+        self.print = self.enterContext(patch("builtins.print"))
+        self.details = {
+            "obsDt": "2026-10-30", "creationDt": "2026-10-30",
+            "subnational1Code": "IN-KA", "durationHrs": 0.25,
+        }
+
+    def test_duration_threshold_is_exactly_fifteen_minutes_in_hours(self):
+        for duration in (0, 0.1, 14 / 60, 0.249999, 0.25, 0.250001, 1, 2):
+            with self.subTest(duration=duration):
+                self.details["durationHrs"] = duration
+                record = fetch_ebird_data.checklist_record("S1", "Mysuru", self.details, {})
+                self.assertEqual(record is not None, duration >= 0.25)
+                if record is not None:
+                    self.assertEqual(record["durationHrs"], duration)
+                    self.assertEqual(record["subnational1Code"], "IN-KA")
+
+    def test_missing_duration_is_excluded_with_reason(self):
+        for omit in (True, False):
+            with self.subTest(omit=omit):
+                if omit:
+                    self.details.pop("durationHrs")
+                else:
+                    self.details["durationHrs"] = None
+                self.assertIsNone(
+                    fetch_ebird_data.checklist_record("S1", "Mysuru", self.details, {})
+                )
+                self.print.assert_called_with(
+                    "Excluding S1: durationHrs is not reported."
+                )
+
+    def test_malformed_duration_fails_explicitly(self):
+        for duration in ("0.25", "", True, False, -1, float("nan"), float("inf"), []):
+            with self.subTest(duration=duration):
+                self.details["durationHrs"] = duration
+                with self.assertRaisesRegex(ValueError, "durationHrs"):
+                    fetch_ebird_data.checklist_record("S1", "Mysuru", self.details, {})
+
+    def test_non_karnataka_checklists_are_excluded_despite_district_feed(self):
+        for state_code in ("IN-TN", "IN-KL", "US-NY", "IN-KA-MY"):
+            with self.subTest(state_code=state_code):
+                self.details["subnational1Code"] = state_code
+                self.assertIsNone(
+                    fetch_ebird_data.checklist_record("S1", "Mysuru", self.details, {})
+                )
+                self.print.assert_called()
+
+    def test_missing_or_invalid_state_fails_explicitly(self):
+        for state_code in (None, "", 123):
+            with self.subTest(state_code=state_code):
+                self.details["subnational1Code"] = state_code
+                with self.assertRaisesRegex(ValueError, "subnational1Code"):
+                    fetch_ebird_data.checklist_record("S1", "Mysuru", self.details, {})
+
+
 class FetchChecklistsTests(unittest.TestCase):
     def setUp(self):
         self.api_get = self.enterContext(
@@ -244,6 +342,7 @@ class FetchChecklistsTests(unittest.TestCase):
         feed = [{"subId": f"S{index}"} for index in range(12)]
         details = {
             "obsDt": "2026-10-30 08:00", "creationDt": "2026-10-30 12:00",
+            "subnational1Code": "IN-KA", "durationHrs": 0.25,
             "obs": [{"speciesCode": "housep"}],
         }
         self.api_get.side_effect = [feed] + [details] * 12
@@ -264,6 +363,7 @@ class FetchChecklistsTests(unittest.TestCase):
         ]
         self.api_get.side_effect = [feed] + [{
             "obsDt": "2026-10-30", "creationDt": "2026-10-30", "obs": [],
+            "subnational1Code": "IN-KA", "durationHrs": 0.25,
         }] * 200
         limited_feeds = set()
         checklists = fetch_ebird_data.fetch_district_checklists(
@@ -277,7 +377,10 @@ class FetchChecklistsTests(unittest.TestCase):
             [{"subId": "old"}, {"subId": "late"}, {"subId": "valid"}],
             {"obsDt": "2026-10-29", "creationDt": "2026-10-30"},
             {"obsDt": "2026-10-30", "creationDt": "2026-11-03"},
-            {"obsDt": "2026-10-31", "creationDt": "2026-11-02"},
+            {
+                "obsDt": "2026-10-31", "creationDt": "2026-11-02",
+                "subnational1Code": "IN-KA", "durationHrs": 0.25,
+            },
         ]
         excluded_ids = set()
         checklists = fetch_ebird_data.fetch_district_checklists(
@@ -299,6 +402,13 @@ class FetchChecklistsTests(unittest.TestCase):
                     fetch_ebird_data.fetch_district_checklists(
                         "IN-KA-MY", "Mysuru", {}, set()
                     )
+
+    def test_non_karnataka_district_is_rejected_before_api_request(self):
+        for code in ("IN-TN-CH", "IN-KL", "IN-KAX-MY"):
+            with self.subTest(code=code):
+                with self.assertRaisesRegex(ValueError, "not in Karnataka"):
+                    fetch_ebird_data.fetch_district_checklists(code, "Other", {}, set())
+        self.api_get.assert_not_called()
 
     def test_failed_refresh_leaves_existing_summary_unchanged(self):
         with tempfile.TemporaryDirectory() as output_dir:
@@ -353,6 +463,7 @@ class ArchiveTests(unittest.TestCase):
             return {
                 "obsDt": observation_dates.get(path.rsplit("/", 1)[-1], "2026-10-30"),
                 "creationDt": "2026-11-01",
+                "subnational1Code": "IN-KA", "durationHrs": 0.25,
                 "obs": [{"speciesCode": species}],
                 "userDisplayName": "Not stored",
             }
@@ -375,7 +486,10 @@ class ArchiveTests(unittest.TestCase):
         self.assertTrue(summary["coverageWarning"])
         self.assertEqual(
             set(archive["checklists"][0]),
-            {"checklistId", "date", "submittedDate", "district", "species"},
+            {
+                "checklistId", "date", "submittedDate", "district", "species",
+                "subnational1Code", "durationHrs",
+            },
         )
         self.assertFalse((self.output / "checklists.json.tmp").exists())
 
@@ -418,6 +532,7 @@ class ArchiveTests(unittest.TestCase):
             [{"subId": "S2"}, {"subId": "S3"}],
             {
                 "obsDt": "2026-10-30", "creationDt": "2026-10-30",
+                "subnational1Code": "IN-KA", "durationHrs": 0.25,
                 "obs": [{"speciesCode": "housep"}],
             },
             URLError("failed details"),
@@ -482,6 +597,7 @@ class ArchiveTests(unittest.TestCase):
             return {
                 "obsDt": "2026-10-30",
                 "creationDt": "2026-11-03" if path.endswith("/late") else "2026-11-02",
+                "subnational1Code": "IN-KA", "durationHrs": 0.25,
             }
 
         self.api_get.side_effect = response
@@ -535,6 +651,120 @@ class ArchiveTests(unittest.TestCase):
         ]
         fetch_ebird_data.main()
         self.api_get.assert_any_call("/product/checklist/view/S1")
+        self.assertEqual(self.read_json("checklists.json")["checklists"], [])
+        self.assertEqual(self.read_json("karnataka_summary.json")["checklists"], 0)
+
+    def test_refresh_filters_dates_state_and_duration_before_publishing(self):
+        details = {
+            "valid": {"durationHrs": 0.25},
+            "long": {"durationHrs": 1.5},
+            "short": {"durationHrs": 0.249999},
+            "unknown-duration": {"durationHrs": None},
+            "other-state": {"subnational1Code": "IN-TN"},
+            "old": {"obsDt": "2026-10-29"},
+            "old-year": {"obsDt": "2025-10-30", "creationDt": "2025-10-30"},
+            "late": {"creationDt": "2026-11-03"},
+            "after-event": {"obsDt": "2026-11-03"},
+            "last-day": {"obsDt": "2026-11-02", "creationDt": "2026-11-02"},
+        }
+
+        def response(path, params=None):
+            if path == "/ref/taxonomy/ebird":
+                return []
+            if path.startswith("/product/lists/"):
+                self.assertEqual(path, "/product/lists/IN-KA-MY/2026/10/30")
+                return [{"subId": checklist_id} for checklist_id in details]
+            checklist_id = path.rsplit("/", 1)[-1]
+            return {
+                "obsDt": "2026-10-30", "creationDt": "2026-10-30",
+                "subnational1Code": "IN-KA", "durationHrs": 0.25,
+                "obs": [{"comName": checklist_id}],
+                **details[checklist_id],
+            }
+
+        self.api_get.side_effect = response
+        fetch_ebird_data.main()
+        saved = self.read_json("checklists.json")["checklists"]
+        self.assertEqual({record["checklistId"] for record in saved}, {"valid", "long", "last-day"})
+        summary = self.read_json("karnataka_summary.json")
+        self.assertEqual(summary["checklists"], 3)
+        self.assertEqual(summary["speciesList"], ["last-day", "long", "valid"])
+        self.assertEqual(
+            self.read_json("daily_summary.json"),
+            [
+                {"date": "2026-10-30", "checklists": 2, "species": 2},
+                {"date": "2026-11-02", "checklists": 1, "species": 1},
+            ],
+        )
+        self.assertEqual(self.read_json("district_summary.json")[0]["checklists"], 3)
+
+    def test_legacy_effort_and_state_are_revalidated_even_if_absent_from_feed(self):
+        for missing_field in ("durationHrs", "subnational1Code"):
+            with self.subTest(missing_field=missing_field):
+                self.run_refresh({"30": ["valid", "short", "other"]})
+                archive = self.read_json("checklists.json")
+                for checklist in archive["checklists"]:
+                    del checklist[missing_field]
+                (self.output / "checklists.json").write_text(
+                    json.dumps(archive), encoding="utf-8"
+                )
+
+                def response(path, params=None):
+                    if path == "/ref/taxonomy/ebird" or path.startswith("/product/lists/"):
+                        return []
+                    return {
+                        "obsDt": "2026-10-30", "creationDt": "2026-10-30",
+                        "durationHrs": 0.1 if path.endswith("/short") else 0.25,
+                        "subnational1Code": "IN-TN" if path.endswith("/other") else "IN-KA",
+                    }
+
+                self.api_get.side_effect = response
+                fetch_ebird_data.main()
+                saved = self.read_json("checklists.json")["checklists"]
+                self.assertEqual([record["checklistId"] for record in saved], ["valid"])
+                self.assertEqual(saved[0]["durationHrs"], 0.25)
+                self.assertEqual(saved[0]["subnational1Code"], "IN-KA")
+                self.assertEqual(self.read_json("karnataka_summary.json")["checklists"], 1)
+
+    def test_ineligible_archived_effort_or_state_is_removed_without_feed_entry(self):
+        for field, value in (
+            ("durationHrs", 0.1), ("durationHrs", None), ("subnational1Code", "IN-TN"),
+        ):
+            with self.subTest(field=field, value=value):
+                self.run_refresh({"30": ["S1"]})
+                archive = self.read_json("checklists.json")
+                archive["checklists"][0][field] = value
+                (self.output / "checklists.json").write_text(
+                    json.dumps(archive), encoding="utf-8"
+                )
+                self.run_refresh({"30": []})
+                self.assertEqual(self.read_json("checklists.json")["checklists"], [])
+                self.assertEqual(self.read_json("karnataka_summary.json")["checklists"], 0)
+
+    def test_invalid_fetched_effort_does_not_replace_published_files(self):
+        self.run_refresh({"30": ["S1"]})
+        original = {path: path.read_bytes() for path in self.output.glob("*.json")}
+        self.api_get.side_effect = [
+            [], [{"subId": "S2"}],
+            {
+                "obsDt": "2026-10-30", "creationDt": "2026-10-30",
+                "subnational1Code": "IN-KA", "durationHrs": "bad",
+            },
+        ]
+        with self.assertRaisesRegex(ValueError, "durationHrs"):
+            fetch_ebird_data.main()
+        self.assertEqual(original, {path: path.read_bytes() for path in original})
+
+    def test_newly_shortened_checklist_is_removed_from_archive(self):
+        self.run_refresh({"30": ["S1"]})
+        self.api_get.side_effect = [
+            [], [{"subId": "S1"}],
+            {
+                "obsDt": "2026-10-30", "creationDt": "2026-10-30",
+                "subnational1Code": "IN-KA", "durationHrs": 14 / 60,
+            },
+        ]
+        fetch_ebird_data.main()
         self.assertEqual(self.read_json("checklists.json")["checklists"], [])
         self.assertEqual(self.read_json("karnataka_summary.json")["checklists"], 0)
 

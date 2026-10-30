@@ -1,4 +1,5 @@
 import json
+import math
 import os
 import time
 from collections import defaultdict
@@ -16,6 +17,8 @@ OUT = ROOT / "data"
 API_BASE = "https://api.ebird.org/v2"
 EVENT_START = date(2026, 10, 30)
 EVENT_END = date(2026, 11, 2)
+STATE_CODE = "IN-KA"
+MIN_DURATION_HOURS = 0.25
 REQUEST_DELAY_SECONDS = 3
 MAX_REQUEST_ATTEMPTS = 5
 RETRY_BASE_SECONDS = 60
@@ -127,6 +130,31 @@ def checklist_date(value, field, checklist_id):
     return timestamp.date()
 
 
+def checklist_scope_is_eligible(checklist_id, state_code, duration_hours):
+    if not isinstance(state_code, str) or not state_code:
+        raise ValueError(f"Missing or invalid subnational1Code for checklist {checklist_id}.")
+    if state_code != STATE_CODE:
+        print(f"Excluding {checklist_id}: state {state_code} is not Karnataka.")
+        return False
+    if duration_hours is None:
+        print(f"Excluding {checklist_id}: durationHrs is not reported.")
+        return False
+    if (
+        isinstance(duration_hours, bool)
+        or not isinstance(duration_hours, (int, float))
+        or not math.isfinite(duration_hours)
+        or duration_hours < 0
+    ):
+        raise ValueError(f"Invalid durationHrs for checklist {checklist_id}: {duration_hours!r}")
+    if duration_hours < MIN_DURATION_HOURS:
+        print(
+            f"Excluding {checklist_id}: duration {duration_hours:g} hours "
+            "is less than 15 minutes."
+        )
+        return False
+    return True
+
+
 def checklist_record(checklist_id, district_name, details, taxonomy_names):
     observation_day = checklist_date(details.get("obsDt"), "obsDt", checklist_id)
     submission_day = checklist_date(
@@ -143,10 +171,16 @@ def checklist_record(checklist_id, district_name, details, taxonomy_names):
             flush=True,
         )
         return None
+    if not checklist_scope_is_eligible(
+        checklist_id, details.get("subnational1Code"), details.get("durationHrs")
+    ):
+        return None
     return {
         "checklistId": checklist_id,
         "date": observation_day.isoformat(),
         "submittedDate": submission_day.isoformat(),
+        "subnational1Code": details["subnational1Code"],
+        "durationHrs": details["durationHrs"],
         "district": district_name,
         "species": species_names(details.get("obs", []), taxonomy_names),
     }
@@ -156,6 +190,8 @@ def fetch_district_checklists(
     district_code: str, district_name: str, taxonomy_names: dict,
     limited_feeds: set, excluded_ids: set | None = None,
 ):
+    if not district_code.startswith(f"{STATE_CODE}-"):
+        raise ValueError(f"District code is not in Karnataka: {district_code}")
     checklists = []
 
     for event_day in event_dates():
@@ -239,6 +275,14 @@ def load_archive():
             )
         ):
             print(f"Removing out-of-window archived checklist {checklist_id}.")
+            del checklists[checklist_id]
+        elif (
+            "subnational1Code" in checklist
+            and "durationHrs" in checklist
+            and not checklist_scope_is_eligible(
+                checklist_id, checklist["subnational1Code"], checklist["durationHrs"]
+            )
+        ):
             del checklists[checklist_id]
 
     limited_feeds = set()
@@ -360,8 +404,8 @@ def main():
     taxonomy_names = fetch_taxonomy_names()
 
     for checklist_id, checklist in list(all_checklists.items()):
-        if "submittedDate" not in checklist:
-            print(f"Revalidating dates for archived checklist {checklist_id}.")
+        if not {"submittedDate", "subnational1Code", "durationHrs"} <= checklist.keys():
+            print(f"Revalidating eligibility for archived checklist {checklist_id}.")
             details = api_get(f"/product/checklist/view/{checklist_id}")
             record = checklist_record(
                 checklist_id, checklist["district"], details, taxonomy_names

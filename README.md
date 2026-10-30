@@ -34,6 +34,13 @@ Offset-bearing timestamps are converted to IST; timestamps without an offset
 use the calendar date returned by eBird (the API examples omit timezone offsets).
 The daily chart groups eligible checklists by observation date.
 
+Only checklists whose `subnational1Code` is `IN-KA` (Karnataka) and whose
+reported `durationHrs` is **at least 0.25 hours (15 minutes)** qualify.
+Exactly 15 minutes is included; shorter checklists or checklists without a
+reported duration are excluded with a logged reason. Malformed durations or
+missing state codes fail the refresh rather than publish unverified totals.
+Only Karnataka district feeds are queried.
+
 API requests are paced and transient errors (including HTTP 429 rate limits) are
 retried with exponential backoff and respect for `Retry-After`. If a request
 still fails, the workflow fails without replacing the published summaries with
@@ -59,8 +66,10 @@ excluded even if birdwatching occurred during the event.
 The existing workflow commits the archive together with the summaries, allowing
 the next GitHub Actions run to resume collection. Keep this file when deploying
 or updating the code. Legacy archives starting October 29 are migrated by
-removing October 29 records. Records without a saved submission date are
-re-fetched and validated before being counted. A malformed archive or an
+removing October 29 records. Records without a saved submission date, state
+code or duration are re-fetched and validated before being counted, even if
+absent from the latest feed. Archived records with an ineligible state or
+duration are removed before rebuilding summaries. A malformed archive or an
 archive for any other event date range causes the refresh to fail rather than
 discard saved data.
 
@@ -89,8 +98,8 @@ aggregate summaries cannot be converted back into individual checklist records.
 
 The dashboard displays aggregated checklist and species totals. The public
 archive contains only checklist IDs, observation and submission dates, district
-names and species names; it does not store observer names, contacts, coordinates
-or raw API responses.
+names, state codes, duration in hours and species names; it does not store
+observer names, contacts, coordinates or raw API responses.
 
 Data source: eBird, Cornell Lab of Ornithology.
 Species names are resolved from eBird taxonomy using the species codes in

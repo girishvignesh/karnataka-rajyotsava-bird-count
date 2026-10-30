@@ -31,6 +31,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Test checklist eligibility and refresh logic
+        run: python -m unittest discover -s tests -v
+
       - name: Fetch eBird data and build summaries
         env:
           EBIRD_API_KEY: ${{ secrets.EBIRD_API_KEY }}
